@@ -1,7 +1,7 @@
 # Step-by-Step using KNN algorithm
 ---
 
-<img src="https://github.com/user-attachments/assets/18155613-c342-40c3-b2ff-5f78fc897f7b" width="50"/>
+<img src="https://github.com/user-attachments/assets/18155613-c342-40c3-b2ff-5f78fc897f7b" width="9000"/>
 
 ## 📌 **Step-by-Step Explanation**
 
