@@ -1,6 +1,8 @@
 # Step-by-Step using KNN algorithm
 ---
 
+<img src="https://github.com/user-attachments/assets/18155613-c342-40c3-b2ff-5f78fc897f7b" width="200"/>
+
 ## 📌 **Step-by-Step Explanation**
 
 ### 1. **Choose a data point for which you want to predict a label:**
