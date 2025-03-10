@@ -1,6 +1,6 @@
 # Step-by-Step using KNN algorithm
 ---
-
+KNN is an effective classification and regression algorithm that uses nearby points in order to generate a prediction.
 <img src="https://github.com/user-attachments/assets/18155613-c342-40c3-b2ff-5f78fc897f7b" width="600"/>
 
 ## 📌 **Step-by-Step Explanation**
