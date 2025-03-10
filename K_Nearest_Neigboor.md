@@ -127,4 +127,17 @@ This gives greater emphasis to closer neighbors.
 
 ---
 
-That's how the **K-Nearest Neighbors (KNN)** algorithm works in practice!
+Here's a clear comparison table highlighting key differences between **K-Means** and **K-Nearest Neighbors (KNN)** algorithms:
+
+| Aspect                         | K-Means                                    | K-Nearest Neighbors (KNN)                         |
+|--------------------------------|--------------------------------------------|---------------------------------------------------|
+| **Algorithm Type**             | Unsupervised Learning                      | Supervised Learning                               |
+| **Goal**                       | Clustering (grouping similar points)       | Classification or Regression (predicting labels)  |
+| **Input Data**                 | Unlabeled                                  | Labeled                                           |
+| **"K" Meaning**                | Number of clusters to form                 | Number of neighbors used to make a prediction     |
+| **Training Phase**             | Requires iterative centroid updates        | No explicit training; data points are memorized   |
+| **Prediction Method**          | Assign points to the nearest centroid      | Predict label/value based on majority vote or average of neighbors |
+| **Computational Complexity**   | Moderate (iterative optimization)          | Higher for large datasets (distance calculation for all points) |
+| **Sensitive to Outliers?**     | Yes (outliers affect centroid positions)   | Yes (outliers affect nearest neighbors' decisions)|
+| **Sensitive to Data Scaling?** | Yes                                        | Yes                                               |
+| **Examples of Application**    | Customer segmentation, Image segmentation  | Spam classification, Recommendation systems       |
