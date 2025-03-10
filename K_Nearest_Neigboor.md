@@ -11,9 +11,9 @@ KNN is an effective classification and regression algorithm that uses nearby poi
 ### 2. **Identify the K nearest points around this new point:**
 - Choose a value for **K**. Typical choices are small, odd numbers like 1, 3, 5, or 11.
 - Calculate the **distance** from your chosen point to all other points. Typically, Euclidean distance is used:
-\[
+$$\[
 \text{Distance} = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + \dots}
-\]
+\]$$
 
 ### 3. **Predict the label based on these K neighbors:**
 - **Classification**: Assign the most common class label among the K neighbors.
@@ -21,9 +21,9 @@ KNN is an effective classification and regression algorithm that uses nearby poi
 
 ### 4. **(Optional) Use weighted averages:**
 - Instead of treating each neighbor equally, assign weights based on distance (closer neighbors have more influence):
-  \[
+  $$\[
   \text{Weighted Average} = \frac{\sum (\text{value of neighbor}_i \times \frac{1}{\text{distance}_i})}{\sum (\frac{1}{\text{distance}_i})}
-  \]
+  \]$$
 
 ---
 
@@ -96,9 +96,9 @@ Again, choose **K=3** neighbors closest to (5,4):
 - (2,3): value=90
 
 Average these values:
-\[
+$$\[
 \text{Prediction} = \frac{50 + 80 + 90}{3} = \frac{220}{3} ≈ 73.33
-\]
+\]$$
 
 ---
 
@@ -106,9 +106,9 @@ Average these values:
 
 You could instead weight by distance (closer neighbors matter more):
 
-\[
+$$\[
 \text{Prediction} = \frac{\frac{50}{1.41} + \frac{80}{2.24} + \frac{90}{3.16}}{\frac{1}{1.41} + \frac{1}{2.24} + \frac{1}{3.16}} 
-\]
+\]$$
 
 This gives greater emphasis to closer neighbors.
 
