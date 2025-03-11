@@ -21,18 +21,18 @@ Gradient Boosting is a machine learning technique that builds an ensemble of wea
 
 ### **Mathematical Representation**
 Given a dataset with features \( X \) and target \( y \), we initialize:
-\[
+$$\[
 F_0(X) = \text{mean}(y)
-\]
+\]$$
 At each iteration \( m \), we compute residuals:
-\[
+$$\[
 r_i^{(m)} = y_i - F_{m-1}(X_i)
-\]
-Then, fit a new decision tree \( h_m(X) \) to predict \( r_i^{(m)} \), and update the model:
-\[
-F_m(X) = F_{m-1}(X) + \eta h_m(X)
-\]
-where \( \eta \) is the learning rate.
+\]$$
+Then, fit a new decision tree $$\( h_m(X) \)$$ to predict $$\( r_i^{(m)} \)$$, and update the model:
+$$\[
+F_m(X) = F_{m-1}(X) + $$\eta h_m(X)
+\]$$
+where $$\( \eta \)$$ is the learning rate.
 
 ---
 
