@@ -58,7 +58,7 @@ print(f"AdaBoost Accuracy: {accuracy_score(y_test, y_pred):.4f}")
 ```
 
 #### Gradient Boosting
-👉 **Key idea:** Gradient Boosting minimizes errors by sequentially training models to predict residuals, reducing overall prediction error.
+👉 **Key idea:** Gradient Boosting deals with errors by correcting mistakes from previous weak learners in an iterative fashion.
 
 **Step 1:** Train a base model (typically a decision tree) on the dataset
 ```python
