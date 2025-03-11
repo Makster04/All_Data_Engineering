@@ -1,4 +1,5 @@
 - ```GridSearchCV:``` A hyperparameter tuning technique in machine learning that exhaustively searches over a specified parameter grid to find the best combination of hyperparameters for a given model, using cross-validation to evaluate performance.
+- ```Pipeline:``` A machine learning pipeline automates tasks by processing data in steps like cleaning, selecting features, training a model, and evaluating it, ensuring consistency, efficiency, and easy reuse, often using scikit-learn.
 - ```Cross-Validation:``` A model evaluation technique in machine learning that splits the dataset into multiple subsets (or "folds") to train and test the model on different partitions, ensuring better generalization and reducing overfitting.
 - ```K-Nearest Neigboor:``` An effective classification and regression algorithm that uses nearby points in order to generate a prediction.
 - ```Supervised Learning:``` Training models using labeled data (data with known output values) to predict specific outcomes or classifications.
