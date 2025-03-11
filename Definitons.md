@@ -21,3 +21,8 @@
 - ```Model Deployment:``` Making a trained machine learning model available for use in real-world applications.  
 - ```Pickled:``` Saving a machine learning model so it can be reused later without retraining.  
 - ```Cloud Function:``` A small piece of code that runs automatically when triggered, often used to serve machine learning models without needing a full server.
+- ```Prune:```
+- ```learning_rate:```
+- ```n_estimators:```
+- ```Gradient Boosting:```
+- ```XG Boost Estimators:```
