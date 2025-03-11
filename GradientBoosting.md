@@ -70,4 +70,42 @@ print(f'Mean Squared Error: {mse}')
 - `subsample`: Fraction of samples used for training each tree (introduces randomness).
 - `min_samples_split`: Minimum samples required to split a node.
 
-Would you like to visualize the boosting process with feature importance? 🚀
+---
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.ensemble import GradientBoostingRegressor
+from sklearn.model_selection import train_test_split
+from sklearn.datasets import make_regression
+import ace_tools as tools
+
+# Generate sample data
+X, y = make_regression(n_samples=1000, n_features=5, noise=0.2, random_state=42)
+
+# Split into train and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Train Gradient Boosting model
+gb_model = GradientBoostingRegressor(n_estimators=100, learning_rate=0.1, max_depth=3, random_state=42)
+gb_model.fit(X_train, y_train)
+
+# Get feature importance
+feature_importance = gb_model.feature_importances_
+feature_names = [f'Feature {i+1}' for i in range(X.shape[1])]
+
+# Plot feature importance
+plt.figure(figsize=(8, 5))
+plt.barh(feature_names, feature_importance, color='blue', edgecolor='black')
+plt.xlabel("Importance Score")
+plt.ylabel("Features")
+plt.title("Feature Importance in Gradient Boosting")
+plt.gca().invert_yaxis()  # Highest importance on top
+
+# Show plot
+plt.show()
+```
+```
+![image](https://github.com/user-attachments/assets/86507e63-38b9-4cac-bbcf-629ab3072050)
+```
+
