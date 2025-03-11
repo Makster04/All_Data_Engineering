@@ -27,11 +27,11 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 ```
 ---
 
-### ***Step 3: Standardize your Data**
+### **Step 3: Standardize your Data**
 ```python
 from sklearn.preprocessing import StandardScaler
 
-# 1️Instantiate StandardScaler
+# Instantiate StandardScaler
 scaler = StandardScaler()
 
 # Fit and transform the training data
@@ -45,30 +45,25 @@ X_test_scaled = scaler.transform(X_test)
 
 ### **Step 4: Define a Parameter Grid**
 ```python
-# Define the parameter grid for tuning RandomForestClassifier
+# Step 4: Define a Parameter Grid for KNeighborsClassifier
 param_grid = {
-    'n_estimators': [50, 100, 200],         # Number of trees in the forest
-    'max_depth': [None, 10, 20, 30],        # Maximum depth of the tree
-    'min_samples_split': [2, 5, 10],        # Minimum samples required to split a node
-    'min_samples_leaf': [1, 2, 4],          # Minimum samples required at each leaf node
-    'bootstrap': [True, False]              # Whether bootstrap samples are used
-}
+    'n_neighbors': [3, 5, 7, 9],  # Number of neighbors to consider
+    'weights': ['uniform', 'distance'],  # Weight function used in prediction
+    'metric': ['euclidean', 'manhattan', 'minkowski']  # Distance metric
 ```
 
 ---
 
-### **Step 5: Initialize and Perform Grid Search**
+### Step 5: Initialize and Perform Grid Search
 ```python
-# Initialize the classifier
-rf = RandomForestClassifier(random_state=42)
+knn = KNeighborsClassifier()
 
-# Initialize GridSearchCV
 grid_search = GridSearchCV(
-    estimator=rf, 
+    estimator=knn, 
     param_grid=param_grid, 
-    cv=5,           # 5-fold cross-validation
-    n_jobs=-1,      # Use all available processors
-    verbose=2       # Display progress
+    cv=5,  # 5-fold cross-validation
+    n_jobs=-1,  # Use all available processors
+    verbose=2  # Display progress
 )
 
 # Fit GridSearchCV
@@ -90,8 +85,10 @@ y_pred = best_model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 
 # Print results
-print(f"Best Parameters: {best_params}")
-print(f"Test Set Accuracy: {accuracy:.4f}")
+best_params, accuracy
+```
+```
+Fitting 5 folds for each of 24 candidates, totalling 120 fits
 ```
 
 ---
