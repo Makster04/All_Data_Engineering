@@ -1,8 +1,8 @@
-- ```**GridSearchCV:**``` A hyperparameter tuning technique in machine learning that exhaustively searches over a specified parameter grid to find the best combination of hyperparameters for a given model, using cross-validation to evaluate performance.
-- ```**Cross-Validation:**``` A model evaluation technique in machine learning that splits the dataset into multiple subsets (or "folds") to train and test the model on different partitions, ensuring better generalization and reducing overfitting.
-- ```**K-Nearest Neigboor:**``` An effective classification and regression algorithm that uses nearby points in order to generate a prediction.
-- ```**Supervised Learning:**``` Training models using labeled data (data with known output values) to predict specific outcomes or classifications.
-- ```**Unsupervised Learning:**``` Training models using unlabeled data (data without known output values) to discover hidden patterns, groupings, or structures within the data, rather than predicting specific outcomes.
-- ```**Manhattan Distance:**``` Measures the total horizontal and vertical distance between two points, like city blocks, used in machine learning and optimization.  
-- ```**Euclidean Distance:**``` The shortest straight-line distance between two points, commonly used in machine learning for measuring similarity.  
-- ```**Minkowski Distance:**``` A flexible distance formula that generalizes both Manhattan and Euclidean distances by adjusting a parameter.
+- ```GridSearchCV:``` A hyperparameter tuning technique in machine learning that exhaustively searches over a specified parameter grid to find the best combination of hyperparameters for a given model, using cross-validation to evaluate performance.
+- ```Cross-Validation:``` A model evaluation technique in machine learning that splits the dataset into multiple subsets (or "folds") to train and test the model on different partitions, ensuring better generalization and reducing overfitting.
+- ```K-Nearest Neigboor:``` An effective classification and regression algorithm that uses nearby points in order to generate a prediction.
+- ```Supervised Learning:``` Training models using labeled data (data with known output values) to predict specific outcomes or classifications.
+- ```Unsupervised Learning:``` Training models using unlabeled data (data without known output values) to discover hidden patterns, groupings, or structures within the data, rather than predicting specific outcomes.
+- ```Manhattan Distance:``` Measures the total horizontal and vertical distance between two points, like city blocks, used in machine learning and optimization.  
+- ```Euclidean Distance:``` The shortest straight-line distance between two points, commonly used in machine learning for measuring similarity.  
+- ```Minkowski Distance:``` A flexible distance formula that generalizes both Manhattan and Euclidean distances by adjusting a parameter.
