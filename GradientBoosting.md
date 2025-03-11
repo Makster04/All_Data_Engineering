@@ -105,7 +105,6 @@ plt.gca().invert_yaxis()  # Highest importance on top
 # Show plot
 plt.show()
 ```
-```
 ![image](https://github.com/user-attachments/assets/86507e63-38b9-4cac-bbcf-629ab3072050)
-```
+
 
