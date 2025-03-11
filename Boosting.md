@@ -1,3 +1,5 @@
+# Boosting vs Random Forest
+---
 ### **Comparison of Weak and Strong Learners**
 
 | Feature | Weak Learner | Strong Learner |
@@ -91,4 +93,51 @@ Gradient Boosting and Random Forest are both ensemble learning methods that use 
 Gradient Boosting is generally preferred for high-accuracy predictive modeling but requires more tuning. Random Forest is more robust and easier to implement for most classification and regression tasks.
 
 ---
-I've run a comparison between **Gradient Boosting** and **Random Forest** on a synthetic dataset. You can see the accuracy results in the table. Let me know if you want further analysis or modifications, such as tuning hyperparameters or using a real-world dataset! 🚀
+```python
+import numpy as np
+import pandas as pd
+from sklearn.datasets import make_classification
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import GradientBoostingClassifier, RandomForestClassifier
+from sklearn.metrics import accuracy_score
+import ace_tools as tools
+
+# Generate a synthetic dataset
+X, y = make_classification(n_samples=2000, n_features=20, n_informative=15, 
+                           n_redundant=5, random_state=42)
+
+# Split the dataset
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Initialize classifiers
+gb_clf = GradientBoostingClassifier(random_state=42)
+rf_clf = RandomForestClassifier(random_state=42)
+
+# Train classifiers
+gb_clf.fit(X_train, y_train)
+rf_clf.fit(X_train, y_train)
+
+# Predictions
+gb_pred = gb_clf.predict(X_test)
+rf_pred = rf_clf.predict(X_test)
+
+# Calculate accuracy
+gb_accuracy = accuracy_score(y_test, gb_pred)
+rf_accuracy = accuracy_score(y_test, rf_pred)
+
+# Create a DataFrame for results
+results_df = pd.DataFrame({
+    "Model": ["Gradient Boosting", "Random Forest"],
+    "Accuracy": [gb_accuracy, rf_accuracy]
+})
+
+# Display results
+tools.display_dataframe_to_user(name="Model Accuracy Comparison", dataframe=results_df)
+```
+```
+Result
+               Model  Accuracy
+0  Gradient Boosting  0.886667
+1      Random Forest  0.906667
+```
+Here is the initial accuracy comparison between Gradient Boosting and Random Forest on the synthetic dataset. Let me know if you'd like further analysis, such as hyperparameter tuning or evaluation on a real-world dataset.
