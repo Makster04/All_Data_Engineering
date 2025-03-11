@@ -69,16 +69,16 @@ base_learner = DecisionTreeRegressor(max_depth=3)
 ```
 **Step 2:** Compute residual errors (differences between actual and predicted values) - Done implicitly in Gradient Boosting
 
-# Step 3: Train the next weak learner to predict the residuals (errors)
-# Step 4: Add this learner to the model using a learning rate (scaling factor)
+**Step 3:** Train the next weak learner to predict the residuals (errors)
+**Step 4:** Add this learner to the model using a learning rate (scaling factor)
 ```python
 grad_boost = GradientBoostingRegressor(n_estimators=100, learning_rate=0.1, max_depth=3, random_state=42)
 ```
-# Step 5: Repeat until a stopping criterion is met (e.g., number of iterations, minimal error improvement)
+**Step 5:** Repeat until a stopping criterion is met (e.g., number of iterations, minimal error improvement)
 ```python
 grad_boost.fit(X_train_reg, y_train_reg)
 ```
-# Step 6: The final model is a sum of all weak learners' predictions
+**Step 6:** The final model is a sum of all weak learners' predictions
 ```python
 y_pred_reg = grad_boost.predict(X_test_reg)
 mse = mean_squared_error(y_test_reg, y_pred_reg)
