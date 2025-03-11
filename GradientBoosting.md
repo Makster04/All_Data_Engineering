@@ -20,11 +20,11 @@ Gradient Boosting is a machine learning technique that builds an ensemble of wea
    - The final model is a sum of all trees’ weighted predictions.
 
 ### **Mathematical Representation**
-Given a dataset with features \( X \) and target \( y \), we initialize:
+Given a dataset with features $$\( X \)$$ and target $$\( y \)$$, we initialize:
 $$\[
 F_0(X) = \text{mean}(y)
 \]$$
-At each iteration \( m \), we compute residuals:
+At each iteration $$\( m \)$$, we compute residuals:
 $$\[
 r_i^{(m)} = y_i - F_{m-1}(X_i)
 \]$$
