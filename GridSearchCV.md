@@ -25,10 +25,25 @@ y = data.target
 # Split into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 ```
+---
+
+### ***Step 3: Standardize your Data**
+```python
+from sklearn.preprocessing import StandardScaler
+
+# 1️Instantiate StandardScaler
+scaler = StandardScaler()
+
+# Fit and transform the training data
+X_train_scaled = scaler.fit_transform(X_train)
+
+# Transform the test data (using the same scaler)
+X_test_scaled = scaler.transform(X_test)
+```
 
 ---
 
-### **Step 3: Define a Parameter Grid**
+### **Step 4: Define a Parameter Grid**
 ```python
 # Define the parameter grid for tuning RandomForestClassifier
 param_grid = {
@@ -42,7 +57,7 @@ param_grid = {
 
 ---
 
-### **Step 4: Initialize and Perform Grid Search**
+### **Step 5: Initialize and Perform Grid Search**
 ```python
 # Initialize the classifier
 rf = RandomForestClassifier(random_state=42)
@@ -62,7 +77,7 @@ grid_search.fit(X_train, y_train)
 
 ---
 
-### **Step 5: Evaluate the Best Model**
+### **Step 6: Evaluate the Best Model**
 ```python
 # Get the best model and its parameters
 best_model = grid_search.best_estimator_
