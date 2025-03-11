@@ -51,7 +51,7 @@ ada_boost.fit(X_train, y_train)
 ```
 **Step 5:** Repeat steps until the desired number of weak learners are trained (Already done in AdaBoostClassifier)**
 
-** Step 6:** The final model is a weighted combination of all weak learners
+**Step 6:** The final model is a weighted combination of all weak learners
 ```python
 y_pred = ada_boost.predict(X_test)
 print(f"AdaBoost Accuracy: {accuracy_score(y_test, y_pred):.4f}")
