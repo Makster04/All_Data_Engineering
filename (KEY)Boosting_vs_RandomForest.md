@@ -17,8 +17,7 @@ Boosting algorithms build a strong learner by sequentially training weak learner
 
 ---
 
-### Boosting in AdaBoost and Gradient Boosting ***(Converting Weak Learners into a Strong Learner
-)***
+### Boosting in AdaBoost and Gradient Boosting ***(Converting Weak Learners into a Strong Learner)***
 Boosting is an ensemble method where models are trained sequentially to correct the mistakes of previous models.
 ```python
 import numpy as np
