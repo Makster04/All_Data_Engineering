@@ -19,28 +19,71 @@ Boosting algorithms build a strong learner by sequentially training weak learner
 
 ### **Boosting in AdaBoost and Gradient Boosting**
 Boosting is an ensemble method where models are trained sequentially to correct the mistakes of previous models.
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor
+from sklearn.ensemble import AdaBoostClassifier, GradientBoostingRegressor
+from sklearn.datasets import make_classification, make_regression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, mean_squared_error
+```
+#### AdaBoost (Adaptive Boosting)
+👉 **Key idea:** AdaBoost emphasizes difficult samples, making future weak learners focus on correcting them.
 
-#### **AdaBoost (Adaptive Boosting)**
-- **Step 1**: Assign equal weights to all data points.
-- **Step 2**: Train a weak learner (e.g., decision stump).
-- **Step 3**: Calculate error and adjust weights:
-  - Increase weights of misclassified samples.
-  - Decrease weights of correctly classified samples.
-- **Step 4**: Train the next weak learner with updated weights.
-- **Step 5**: Repeat steps until the desired number of weak learners are trained.
-- **Step 6**: The final model is a weighted combination of all weak learners.
+**Step 1:** Assign equal weights to all data points (Implicit in AdaBoost model)
+```python
+X, y = make_classification(n_samples=500, n_features=20, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+```
+**Step 2:** Train a weak learner (e.g., decision stump)
+```python
+weak_learner = DecisionTreeClassifier(max_depth=1)
+```
+**Step 3:** Calculate error and adjust weights:
+```python
+# Increase weights of misclassified samples, decrease weights of correctly classified samples
+ada_boost = AdaBoostClassifier(base_estimator=weak_learner, n_estimators=50, learning_rate=1.0, random_state=42)
+```
+**Step 4:** Train the next weak learner with updated weights
+```python
+ada_boost.fit(X_train, y_train)
+```
+**Step 5:** Repeat steps until the desired number of weak learners are trained (Already done in AdaBoostClassifier)**
 
-👉 **Key idea**: AdaBoost emphasizes difficult samples, making future weak learners focus on correcting them.
+** Step 6:** The final model is a weighted combination of all weak learners
+```python
+y_pred = ada_boost.predict(X_test)
+print(f"AdaBoost Accuracy: {accuracy_score(y_test, y_pred):.4f}")
+```
 
-#### **Gradient Boosting**
-- **Step 1**: Train a base model (typically a decision tree) on the dataset.
-- **Step 2**: Compute residual errors (differences between actual and predicted values).
-- **Step 3**: Train the next weak learner to predict the residuals (errors).
-- **Step 4**: Add this learner to the model using a learning rate (scaling factor).
-- **Step 5**: Repeat until a stopping criterion is met (e.g., number of iterations, minimal error improvement).
-- **Step 6**: The final model is a sum of all weak learners' predictions.
+#### Gradient Boosting
+👉 **Key idea:** Gradient Boosting minimizes errors by sequentially training models to predict residuals, reducing overall prediction error.
 
-👉 **Key idea**: Gradient Boosting minimizes errors by iteratively refining residual predictions.
+**Step 1:** Train a base model (typically a decision tree) on the dataset
+```python
+X_reg, y_reg = make_regression(n_samples=500, n_features=20, noise=0.1, random_state=42)
+X_train_reg, X_test_reg, y_train_reg, y_test_reg = train_test_split(X_reg, y_reg, test_size=0.3, random_state=42)
+
+base_learner = DecisionTreeRegressor(max_depth=3)
+```
+**Step 2:** Compute residual errors (differences between actual and predicted values) - Done implicitly in Gradient Boosting
+
+# Step 3: Train the next weak learner to predict the residuals (errors)
+# Step 4: Add this learner to the model using a learning rate (scaling factor)
+```python
+grad_boost = GradientBoostingRegressor(n_estimators=100, learning_rate=0.1, max_depth=3, random_state=42)
+```
+# Step 5: Repeat until a stopping criterion is met (e.g., number of iterations, minimal error improvement)
+```python
+grad_boost.fit(X_train_reg, y_train_reg)
+```
+# Step 6: The final model is a sum of all weak learners' predictions
+```python
+y_pred_reg = grad_boost.predict(X_test_reg)
+mse = mean_squared_error(y_test_reg, y_pred_reg)
+print(f"Gradient Boosting MSE: {mse:.4f}")
+```
 
 ---
 
