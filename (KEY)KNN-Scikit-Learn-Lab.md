@@ -124,14 +124,14 @@ dtype: int64
 
 ```python
 # Drop the rows missing values in the 'Embarked' column
-df = None
+df.dropna(subset=['Embarked'], inplace=True)
 df.isna().sum()
 ```
 
 
 ```python
 # One-hot encode the categorical columns
-one_hot_df = None
+one_hot_df = pd.get_dummies(df, columns=['Sex', 'Embarked'], drop_first=True)
 one_hot_df.head()
 ```
 ```
