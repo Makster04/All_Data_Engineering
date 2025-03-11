@@ -7,3 +7,13 @@
 - ```Manhattan Distance:``` Measures the total horizontal and vertical distance between two points, like city blocks, used in machine learning and optimization.  
 - ```Euclidean Distance:``` The shortest straight-line distance between two points, commonly used in machine learning for measuring similarity.  
 - ```Minkowski Distance:``` A flexible distance formula that generalizes both Manhattan and Euclidean distances by adjusting a parameter.
+- ```Training on Different Realizations:``` A technique where a model is trained on multiple versions of a dataset to improve generalization and robustness by capturing variations in the data.  
+- ```Criterion:``` A function used to measure a model’s performance, such as loss functions in machine learning or splitting criteria in decision trees.  
+- ```Culmen Length:``` The measurement of a bird’s upper beak from base to tip, often used in biological and ecological studies.  
+- ```Recursion:``` A process where a function calls itself to solve smaller instances of a problem, commonly used in algorithms like factorial computation and tree traversal.  
+- ```Bagging (Bootstrap Aggregation):``` An ensemble learning method that improves model accuracy by training multiple models on randomly sampled subsets of data and averaging their predictions.
+- ```Decision Boundaries:``` In machine learning, decision boundaries separate different classes in a feature space. A model uses these boundaries to classify new data points based on learned patterns.
+- ```Decision Tree:``` A machine learning algorithm that splits data into branches based on feature values, creating a tree-like structure to make predictions in classification and regression tasks.  
+- ```Random Forest:``` An ensemble learning method that builds multiple decision trees on different data subsets and averages their predictions to improve accuracy and reduce overfitting.  
+- ```Bagging Forest:``` A variation of the random forest that uses bootstrap aggregation (bagging) to train multiple decision trees independently on random subsets of data and combines their outputs for better generalization.  
+- ```Extra Forest (Extremely Randomized Trees):``` A variant of the random forest that introduces more randomness by selecting feature split points randomly, leading to faster training and often improved generalization.
