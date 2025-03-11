@@ -17,7 +17,8 @@ Boosting algorithms build a strong learner by sequentially training weak learner
 
 ---
 
-### **Boosting in AdaBoost and Gradient Boosting**
+### **Boosting in AdaBoost and Gradient Boosting (Converting Weak Learners into a Strong Learner
+)**
 Boosting is an ensemble method where models are trained sequentially to correct the mistakes of previous models.
 ```python
 import numpy as np
@@ -29,7 +30,11 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, mean_squared_error
 ```
 #### AdaBoost (Adaptive Boosting)
-👉 **Key idea:** AdaBoost emphasizes difficult samples, making future weak learners focus on correcting them.
+👉 **Key idea:** 
+- AdaBoost emphasizes difficult samples, making future weak learners focus on correcting them.
+- AdaBoost combine multiple weak learners (e.g., decision stumps) into a strong learner by weighting and improving each step.
+- The next iteration will train based on errors in the intitial iteration. The iteration is continuous 
+
 
 **Step 1:** Assign equal weights to all data points (Implicit in AdaBoost model)
 ```python
