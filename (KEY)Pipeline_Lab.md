@@ -181,12 +181,15 @@ Test Set Accuracy: 0.578
 
 ```python
 # Fit the training data to pipeline
-
+scaled_pipeline_1.fit(X_train, y_train)
 
 # Print the accuracy on test set
-
+accuracy = scaled_pipeline_1.score(X_test, y_test)
+print(f"Test Set Accuracy: {accuracy:.3f}")
 ```
-
+```
+Test Set Accuracy: 0.578
+```
 If you did everything right, this answer should match the one from above! 
 
 Of course, you can also perform a grid search to determine which combination of hyperparameters can be used to build the best possible model. The way you define the pipeline still remains the same. What you need to do next is define the grid and then use `GridSearchCV()`. Let's do this now.
@@ -201,7 +204,10 @@ Again, build a pipeline with two steps:
 
 ```python
 # Build a pipeline with StandardScaler and RandomForestClassifier
-scaled_pipeline_2 = None
+scaled_pipeline_2 = Pipeline([
+        ("ss", StandardScaler()), 
+        ("RF", RandomForestClassifier(random_state=123))
+    ])
 ```
 
 Use the defined `grid` to perform a grid search. We limited the hyperparameters and possible values to only a few values in order to limit the runtime. 
@@ -223,7 +229,8 @@ Define a grid search now. Use:
 
 ```python
 # Define a grid search
-gridsearch = None
+gridsearch = GridSearchCV(scaled_pipeline_2, param_grid=grid, scoring='accuracy', cv=5)
+
 ```
 
 After defining the grid values and the grid search criteria, all that is left to do is fit the model to training data and then score the test set. Do this below: 
@@ -231,10 +238,19 @@ After defining the grid values and the grid search criteria, all that is left to
 
 ```python
 # Fit the training data
+gridsearch.fit(X_train, y_train)
 
 
 # Print the accuracy on test set
+print(f'Best Parameters: {gridsearch.best_params_}')
 
+accuracy_pipeline_2 = gridsearch.score(X_test, y_test)
+print(f'Pipeline RandomForest Model Accuracy: {accuracy_pipeline_2:.4f}')
+```
+
+```
+Best Parameters: {'RF__max_depth': 6, 'RF__min_samples_leaf': 3, 'RF__min_samples_split': 2}
+Pipeline RandomForest Model Accuracy: 0.6075
 ```
 
 ## Summary
