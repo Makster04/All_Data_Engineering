@@ -18,3 +18,6 @@
 - ```Bagging Forest:``` A variation of the random forest that uses bootstrap aggregation (bagging) to train multiple decision trees independently on random subsets of data and combines their outputs for better generalization.  
 - ```Extra Forest (Extremely Randomized Trees):``` A variant of the random forest that introduces more randomness by selecting feature split points randomly, leading to faster training and often improved generalization.
 - ```Computation Time:``` The total time required for a computer to execute a given task or algorithm, typically measured in milliseconds, seconds, or longer. It depends on factors like algorithm complexity, hardware efficiency, and data size.
+- ```Model Deployment:``` Making a trained machine learning model available for use in real-world applications.  
+- ```Pickled:``` Saving a machine learning model so it can be reused later without retraining.  
+- ```Cloud Function:``` A small piece of code that runs automatically when triggered, often used to serve machine learning models without needing a full server.
