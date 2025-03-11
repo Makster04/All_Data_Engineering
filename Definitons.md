@@ -21,8 +21,9 @@
 - ```Model Deployment:``` Making a trained machine learning model available for use in real-world applications.  
 - ```Pickled:``` Saving a machine learning model so it can be reused later without retraining.  
 - ```Cloud Function:``` A small piece of code that runs automatically when triggered, often used to serve machine learning models without needing a full server.
-- ```Prune:```
-- ```learning_rate:```
-- ```n_estimators:```
-- ```Gradient Boosting:```
-- ```XG Boost Estimators:```
+- ```Prune:``` Removing unnecessary branches in decision trees or neural networks to reduce overfitting and improve efficiency.  
+- ```learning_rate:``` Controls how much model weights adjust per step in optimization; too high may overshoot, too low slows learning.  
+- ```n_estimators:``` The number of models (trees) in ensemble methods like Random Forest or Gradient Boosting; more improves accuracy but increases computation.  
+- ```Gradient Boosting:``` A sequential learning method where each model corrects the previous one's errors, improving accuracy.  
+- ```XGBoost Estimators:``` A fast, optimized version of gradient boosting that enhances accuracy using efficient algorithms and regularization.  
+- ```Hyperparameter Tuning:``` Optimizing model settings (e.g., learning rate, tree depth) to improve performance, often using GridSearchCV or RandomizedSearchCV.
