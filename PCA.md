@@ -8,8 +8,9 @@ PCA is a statistical method that:
 - Projects the original data onto these principal components.
 - Reduces redundancy and noise by focusing on the most significant components.
 
+---
+
 ### Mathematically, PCA involves:
-### **Mathematical Implementation of PCA in Python**
 Below is a step-by-step breakdown of PCA using pure **NumPy** (without `sklearn`) to fully understand the underlying mathematical operations.
 
 ---
