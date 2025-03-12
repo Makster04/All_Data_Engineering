@@ -112,7 +112,8 @@ Gradient Boosting and Random Forest are both ensemble learning methods that use 
 
 | Feature | **Gradient Boosting** | **Random Forest** |
 |---------|----------------------|------------------|
-| **Ensemble Type** | Sequential (Boosting) | Parallel (Bagging) |
+| **Ensemble Type** | Sequential (Boosting) = Models are built one after another, each learning from the previous one's mistakes to improve accuracy.
+ | Parallel (Bagging) = Multiple models are trained independently on different data subsets and combined for a stronger, more stable prediction. |
 | **Tree Building Process** | Trees are built sequentially, with each tree correcting the mistakes of the previous ones. | Trees are built independently using a random subset of data and features. |
 | **Goal** | Minimize residual errors by focusing on mistakes iteratively. | Reduce variance and overfitting by averaging multiple deep decision trees. |
 | **Handling Bias & Variance** | Reduces bias, but can be prone to overfitting. | Reduces variance by averaging multiple trees. |
