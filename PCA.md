@@ -12,10 +12,16 @@ PCA is a statistical method that:
 
 ### Mathematically, PCA involves:
 Below is a step-by-step breakdown of PCA using pure **NumPy** (without `sklearn`) to fully understand the underlying mathematical operations.
+#### **Summary of Steps**
+1. **Standardizing the Data** → Makes sure all features have mean **0** and variance **1**.
+2. **Computing the Covariance Matrix** → Measures relationships between features.
+3. **Computing Eigenvalues & Eigenvectors** → Determines principal components.
+4. **Sorting Eigenvectors** → Selects the most important features.
+5. **Projecting Data** → Reduces dimensions while preserving the most variance.
 
 ---
 
-### **1. Standardizing the Data**  
+#### **1. Standardizing the Data**  
 Ensuring each feature has **mean = 0** and **unit variance = 1**.
 
 ```python
@@ -40,7 +46,7 @@ print("Standard deviation after standardization:\n", np.std(X_standardized, axis
 
 ---
 
-### **2. Computing the Covariance Matrix**  
+#### **2. Computing the Covariance Matrix**  
 This matrix tells us how much each feature varies in relation to others.
 
 ```python
@@ -52,7 +58,7 @@ print("Covariance Matrix:\n", cov_matrix)
 
 ---
 
-### **3. Computing Eigenvalues and Eigenvectors**  
+#### **3. Computing Eigenvalues and Eigenvectors**  
 Eigenvalues and eigenvectors determine the **principal components**.
 
 ```python
@@ -67,7 +73,7 @@ print("Eigenvectors:\n", eigenvectors)
 
 ---
 
-### **4. Sorting Eigenvectors**  
+#### **4. Sorting Eigenvectors**  
 Selecting the top eigenvectors based on eigenvalues.
 
 ```python
@@ -83,7 +89,7 @@ print("Sorted Eigenvectors:\n", eigenvectors_sorted)
 
 ---
 
-### **5. Projecting the Data**  
+#### **5. Projecting the Data**  
 Transforming data into the new lower-dimensional space.
 
 ```python
@@ -105,17 +111,7 @@ plt.title('PCA Projection of Iris Dataset')
 plt.colorbar(label='Target Classes')
 plt.show()
 ```
-
 ---
-
-### **Summary of Steps**
-1. **Standardizing the Data** → Makes sure all features have mean **0** and variance **1**.
-2. **Computing the Covariance Matrix** → Measures relationships between features.
-3. **Computing Eigenvalues & Eigenvectors** → Determines principal components.
-4. **Sorting Eigenvectors** → Selects the most important features.
-5. **Projecting Data** → Reduces dimensions while preserving the most variance.
-
-This is how **PCA works mathematically in Python** without using `sklearn`. Would you like to extend this with **Kernel PCA** or PCA applied to **real-world datasets like images**? 🚀
 
 ## 3. Comparison and Contrast of PCA with Other Methods
 
@@ -129,6 +125,8 @@ This is how **PCA works mathematically in Python** without using `sklearn`. Woul
 | **Data Preservation** | Maximizes variance | Preserves local structure | Maximizes class separability | Learns hierarchical representations |
 
 PCA is best suited for cases where the primary goal is to **reduce features while retaining variance**, while methods like t-SNE are more for **visualizing clusters** and LDA is for **supervised dimensionality reduction**.
+
+---
 
 ## 4. Python Implementation of PCA
 Let's implement PCA using Python with **Scikit-learn**.
@@ -237,12 +235,3 @@ plt.show()
 - PCA is widely used in **machine learning**, **computer vision**, and **data analysis**.
 
 ---
-
-## **Mathematical Implementation of PCA in Python**
-Below is a step-by-step breakdown of PCA using pure **NumPy** (without `sklearn`) to fully understand the underlying mathematical operations.
-
-Would you like a more advanced example, like **Kernel PCA** or PCA applied to **real-world datasets like images**? 🚀
-
----
-
-This is how **PCA works mathematically in Python** without using `sklearn`. Would you like to extend this with **Kernel PCA** or PCA applied to **real-world datasets like images**? 🚀
