@@ -108,7 +108,7 @@ print(f"Gradient Boosting MSE: {mse:.4f}")
 ### **Comparison of Gradient Boosting and Random Forest**
 
 Gradient Boosting and Random Forest are both ensemble learning methods that use decision trees as base models, but they differ significantly in their approach to training and combining these trees.
-<img src="https://github.com/user-attachments/assets/823e1ef3-256b-4436-b881-cbfdccde7ff7" alt="image" width="300">
+<img src="https://github.com/user-attachments/assets/823e1ef3-256b-4436-b881-cbfdccde7ff7" alt="image" width="500">
 
 | Feature | **Gradient Boosting** | **Random Forest** |
 |---------|----------------------|------------------|
