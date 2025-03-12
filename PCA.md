@@ -8,16 +8,6 @@ PCA is a statistical method that:
 - Projects the original data onto these principal components.
 - Reduces redundancy and noise by focusing on the most significant components.
 
----
-
-### Mathematically, PCA involves:
-Below is a step-by-step breakdown of PCA using pure **NumPy** (without `sklearn`) to fully understand the underlying mathematical operations.
-#### **Summary of Steps**
-1. **Standardizing the Data** → Makes sure all features have mean **0** and variance **1**.
-2. **Computing the Covariance Matrix** → Measures relationships between features.
-3. **Computing Eigenvalues & Eigenvectors** → Determines principal components.
-4. **Sorting Eigenvectors** → Selects the most important features.
-5. **Projecting Data** → Reduces dimensions while preserving the most variance.
 
 ---
 
