@@ -62,3 +62,7 @@ Sure! Here is the categorized list with the current definitions:
 - ```Pickled:``` Saving a machine learning model so it can be reused later without retraining.  
 
 ---
+### **Recomendations**
+- ```Collaborative Filtering:```
+- ```Memory-Based```
+
