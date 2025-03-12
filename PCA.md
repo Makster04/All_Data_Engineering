@@ -10,6 +10,12 @@ PCA is a statistical method that:
 
 
 ---
+### **Summary of Steps** (Without Sckit Learning)
+1. **Standardizing the Data** → Makes sure all features have mean **0** and variance **1**.
+2. **Computing the Covariance Matrix** → Measures relationships between features.
+3. **Computing Eigenvalues & Eigenvectors** → Determines principal components.
+4. **Sorting Eigenvectors** → Selects the most important features.
+5. **Projecting Data** → Reduces dimensions while preserving the most variance.
 
 #### **1. Standardizing the Data**  
 Ensuring each feature has **mean = 0** and **unit variance = 1**.
@@ -103,6 +109,52 @@ plt.show()
 ```
 ---
 
+## With Sckit Learning
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.decomposition import PCA
+from sklearn.preprocessing import StandardScaler
+from sklearn.datasets import load_iris
+
+# Step 1: Load Dataset
+iris = load_iris()
+X = iris.data  # Features
+
+# Step 2: Standardizing the Data
+scaler = StandardScaler()
+X_standardized = scaler.fit_transform(X)  # Automatically normalizes data (mean=0, variance=1)
+
+# Step 3: Apply PCA
+pca = PCA(n_components=2)  # Reducing to 2 dimensions
+X_pca = pca.fit_transform(X_standardized)
+
+# Step 4: Visualizing the PCA-Transformed Data
+plt.figure(figsize=(8, 6))
+plt.scatter(X_pca[:, 0], X_pca[:, 1], c=iris.target, cmap='viridis', edgecolors='k', alpha=0.7)
+plt.xlabel('Principal Component 1')
+plt.ylabel('Principal Component 2')
+plt.title('PCA Projection of Iris Dataset')
+plt.colorbar(label='Target Classes')
+plt.show()
+
+# Step 5: Explained Variance Ratio
+print("Explained Variance Ratio:", pca.explained_variance_ratio_)
+```
+---
+## Comparison: NumPy vs Scikit-learn
+
+| Step                 | NumPy Implementation                  | Scikit-learn Implementation  |
+|----------------------|--------------------------------------|------------------------------|
+| Standardization     | Manual mean & std-dev computation   | StandardScaler()             |
+| Covariance Matrix   | np.cov()                             | Handled internally by PCA   |
+| Eigenvalues/Vectors | np.linalg.eig()                      | Handled internally by PCA   |
+| Sorting Eigenvectors| np.argsort()                         | Handled internally by PCA   |
+| Projection         | Matrix multiplication                | pca.fit_transform()         |
+
+---
+
 ## 3. Comparison and Contrast of PCA with Other Methods
 
 | Feature | PCA | t-SNE | LDA | Autoencoders |
@@ -117,16 +169,7 @@ plt.show()
 PCA is best suited for cases where the primary goal is to **reduce features while retaining variance**, while methods like t-SNE are more for **visualizing clusters** and LDA is for **supervised dimensionality reduction**.
 
 ---
-
-## 4. Python Implementation of PCA
-Let's implement PCA using Python with **Scikit-learn**.
-
-## **Summary of Steps** (Without Sckit Learning)
-1. **Standardizing the Data** → Makes sure all features have mean **0** and variance **1**.
-2. **Computing the Covariance Matrix** → Measures relationships between features.
-3. **Computing Eigenvalues & Eigenvectors** → Determines principal components.
-4. **Sorting Eigenvectors** → Selects the most important features.
-5. **Projecting Data** → Reduces dimensions while preserving the most variance.
+## Examples
 
 ### Example 1: Basic PCA for Dimensionality Reduction
 ```python
