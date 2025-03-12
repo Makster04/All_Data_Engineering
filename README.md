@@ -45,3 +45,36 @@ Projject 5D to 2D (Less dimenstions with more Data)
 PCA acts as a trainfoemer in the poepline
 
 fit/transformer scaler
+
+
+
+discovered Clusters to help predict 
+can become hot encode
+Cluster is characterized by its center
+
+
+Cost-Function of K
+inertia
+
+As you converge, it stabilizes
+
+
+K mean is a distance algorithm
+Scale featire befor scaling cluster
+
+
+Do grid search if yout dont know the number of clusters
+
+.cluster_centers
+labels_attirbut
+
+Since the cneters are scaled, need to unscare back to original dat scale
+elbow method: Use intertia, 
+
+
+Silhouette coeeficent: Better wau to mseasure clustering effectivnents
+
+Cohesion: How tightly bound is each point given clusters  to its cluster members? (Should be smallO
+Differentiation: How far waya is point of a given cluster pounts in other clusters? (Should be big
+
+Sillutte Index: Combines both 
