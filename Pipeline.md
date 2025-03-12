@@ -1,3 +1,5 @@
+# Pipelines
+---
 Sure! In **Machine Learning**, pipelines are used to **automate workflows** by chaining together different data processing steps, feature transformations, and model training in a structured sequence.
 
 ### **Why Use Pipelines?**
