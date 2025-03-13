@@ -65,4 +65,12 @@ Sure! Here is the categorized list with the current definitions:
 ### **Recomendations**
 - ```Collaborative Filtering:```
 - ```Memory-Based```
+- ```Ground-truth clusters```
+- ```clustering```
+- ```Variance Ratio```
+- ``` Calinski Harabasz Score```
+- ```Elbow Plot```
+
+
+
 
