@@ -62,29 +62,29 @@ import matplotlib.pyplot as plt
 from sklearn.datasets import make_blobs
 from sklearn.cluster import KMeans
 ```
-#### Step 1: Generate Sample Data
 ```python
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import make_blobs
+from sklearn.cluster import KMeans
+
+# Step 1: Generate Sample Data
 X, _ = make_blobs(n_samples=300, centers=4, cluster_std=1.0, random_state=42)
-```
 
-#### Step 2: Select K → Chose 𝐾 = 4
-```python
-K = 4.
-```
+# Step 2: Select K → Chose 𝐾 = 4
+K = 4  # Ensure it's an integer
 
-#### Step 3: Initialize Centroids → Randomly selected initial cluster centers.
-```python
-kmeans = KMeans(n_clusters=K, init='random', max_iter=300, random_state=42)
-```
+# Step 3: Initialize K-Means
+kmeans = KMeans(n_clusters=K, init='random', n_init=10, max_iter=300, random_state=42)
 
-#### Step 4: Assign Data Points → Each data point is assigned to the nearest centroid. Update Centroids → Recalculated as the mean of assigned points.
-```python
+# Step 4: Fit the model and predict cluster assignments
 y_kmeans = kmeans.fit_predict(X)
-```
-#### Step 5: Plot the Results → Iterated until centroids no longer changed.
-```python
-plt.scatter(X[:, 0], X[:, 1], c=y_kmeans, cmap='viridis', alpha=0.6, edgecolors='k')
-plt.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1], s=200, c='red', marker='X', label='Centroids')
+
+# Step 5: Plot the Results
+plt.figure(figsize=(8, 6))
+plt.scatter(X[:, 0], X[:, 1], c=y_kmeans, cmap='viridis', alpha=0.6, edgecolors='k', marker='o')
+plt.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1], 
+            s=200, c='red', marker='X', label='Centroids')
 plt.title("K-Means Clustering Example")
 plt.xlabel("Feature 1")
 plt.ylabel("Feature 2")
