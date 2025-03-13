@@ -51,14 +51,14 @@ Instead of storing all user-item interactions, matrix factorization techniques d
 ## **4. How SVD Extracts Meaning with Latent Factors**
 SVD decomposes a **user-item matrix (R)** into three matrices:
 
-\[
+$$\[
 R = U \Sigma V^T
-\]
+\]$$
 
 Where:
-- \( U \) (Users × Latent Factors) represents users in a lower-dimensional space.
-- \( \Sigma \) (Latent Factors × Latent Factors) is a diagonal matrix with singular values.
-- \( V^T \) (Items × Latent Factors) represents items in the same lower-dimensional space.
+- $$\( U \)$$ (Users × Latent Factors) represents users in a lower-dimensional space.
+- $$\( \Sigma \)$$ (Latent Factors × Latent Factors) is a diagonal matrix with singular values.
+- $$\( V^T \)$$ (Items × Latent Factors) represents items in the same lower-dimensional space.
 
 🔹 **How it works in recommendation:**
 1. **Reduces dimensionality**: Captures important information while filtering noise.
@@ -107,6 +107,7 @@ User2  2.177032  0.702052  2.223951  3.758466  2.727082  1.610015
 User3  3.240742  5.548790  2.799675  0.033331  0.250812  4.209246
 User4  0.735292  2.818951  4.214667  2.108890  2.676652  2.050386
 User5  3.193100 -0.264542  1.364048  4.918506  2.950328  1.586077
+
 ```
 
 ---
