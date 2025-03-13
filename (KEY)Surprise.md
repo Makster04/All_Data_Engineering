@@ -1,6 +1,16 @@
 # DSC Implementing Recommender Systems
 ---
 The Surprise library is a powerful Python tool for building and evaluating recommender systems. It streamlines tasks like loading data, selecting algorithms, evaluating their performance, tuning hyperparameters, and making predictions. Below is an explanation of the key components and steps, along with code examples and important terms to help you understand how to implement recommendation engines using Surprise.
+| Feature                 | User-User Collaborative Filtering  | User-Item Collaborative Filtering  |
+|-------------------------|----------------------------------|----------------------------------|
+| **Definition**          | Finds similar users based on rating history and recommends items liked by similar users. | Finds relationships between items based on user preferences and recommends similar items to users. |
+| **Similarity Calculation** | Compares users based on rating patterns. | Compares items based on how users have rated them. |
+| **Algorithm Type**      | Memory-based (KNN, Cosine Similarity, Pearson Correlation). | Model-based (Matrix Factorization like SVD, ALS). |
+| **Example Scenario**    | "Users who liked the same movies as you also liked this movie." | "If you liked this movie, you might like this other movie." |
+| **Pros**               | Works well when there are many user interactions. | Captures latent factors and patterns that are not explicitly visible. |
+| **Cons**               | Struggles with sparsity (not enough overlapping users). | Requires training and is computationally heavier. |
+| **Best for**           | Smaller datasets with many overlapping users. | Large datasets with implicit patterns (e.g., Netflix, Amazon). |
+| **Implementation in Surprise** | `KNNBasic(sim_options={'user_based': True})` | `SVD()`, `ALS()`, `NMF()`, or `KNNBasic(sim_options={'user_based': False})` |
 
 ---
 
