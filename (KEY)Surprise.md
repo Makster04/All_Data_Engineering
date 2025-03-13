@@ -40,7 +40,7 @@ The Surprise library is a powerful Python tool for building and evaluating recom
 
 ---
 
-## Example Walkthrough
+## Example Walkthrough (User-Item)
 
 Below is a detailed example demonstrating how to:
 1. **Load Data:** Use the `Reader` to read in your dataset.
