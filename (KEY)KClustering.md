@@ -16,6 +16,7 @@ K-Means is a popular **unsupervised machine learning algorithm** used for **clus
 - **Example:** In the NBA, clustering can group players based on playing style (e.g., shooters, defenders, playmakers), helping teams make better recruitment and game strategy decisions.
 
 **How can you determine if they're similar?**: The closer two points are, the more similar they are. It is useful to make a distinction between hierarchical and nonhierarchical clustering algorithms:
+
 **Agglomerative Hierarchical:**
 1. It starts with **n** clusters (where n is the number of observations, so each ovservation is a cluster) -->
 2. Then combines the two most similar clusters combines
