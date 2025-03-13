@@ -9,3 +9,9 @@ embeddin rep that been learned via in unsupervised learning
 
 
 train test split
+
+
+FCP is better to use for bias rating
+
+concordunt pairs 
+
