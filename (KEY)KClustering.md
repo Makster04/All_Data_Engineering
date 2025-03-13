@@ -91,7 +91,7 @@ plt.ylabel("Feature 2")
 plt.legend()
 plt.show()
 ```
-<img src="https://github.com/user-attachments/assets/b8683285-4a82-41de-bb72-75d2727255e7" width="300">
+<img src="https://github.com/user-attachments/assets/b8683285-4a82-41de-bb72-75d2727255e7" width="500">
 
 ---
 
