@@ -1,4 +1,4 @@
-# dsc-implementing-recommender-systems
+# DSC Implementing Recommender Systems
 ---
 The Surprise library is a powerful Python tool for building and evaluating recommender systems. It streamlines tasks like loading data, selecting algorithms, evaluating their performance, tuning hyperparameters, and making predictions. Below is an explanation of the key components and steps, along with code examples and important terms to help you understand how to implement recommendation engines using Surprise.
 
