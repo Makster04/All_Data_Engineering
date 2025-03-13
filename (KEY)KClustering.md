@@ -178,6 +178,7 @@ plt.legend()
 plt.tight_layout()
 plt.show()
 ```
+![output (3)](https://github.com/user-attachments/assets/d1864b13-33f1-485e-b4bf-c4d5da461c56)
 
 ---
 
