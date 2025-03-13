@@ -21,3 +21,6 @@ What to do next:
 1. Hierchal 
 2. Look back at Matrx Factorization
 3. Learn about FCP
+
+PCA
+NLP
