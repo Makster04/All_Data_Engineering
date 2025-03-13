@@ -23,4 +23,7 @@ What to do next:
 3. Learn about FCP
 
 PCA
+
+Collabrovie filtering: Finds embedding, finds features, byuusing unsupervised technique
+
 NLP
