@@ -4,7 +4,11 @@ K-Means is a popular **unsupervised machine learning algorithm** used for **clus
 
 ---
 ## What is Clustering?
-**Clustering techniques** are among the most popular unsupervised machine learning algorithms. The main idea behind clustering is that you want to group objects into similar classes, in a way that:
+**Cluster:** A group of similar data points based on certain features.
+
+**K**: Number of groups specified in clustering algorithms. 
+
+**Clustering Techniques** are among the most popular unsupervised machine learning algorithms. The main idea behind clustering is that you want to group objects into similar classes, in a way that:
 - intra-class similarity is high (similarity amongst members of the same group is high) *(Example: Similarity between two players from the same team.)*
 - inter-class similarity is low (similarity of different groups is low) *(Example: Differences between players from different teams.)*
 
