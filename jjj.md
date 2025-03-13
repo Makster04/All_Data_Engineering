@@ -15,3 +15,9 @@ FCP is better to use for bias rating
 
 concordunt pairs 
 
+
+What to do next:
+
+1. Hierchal 
+2. Look back at Matrx Factorization
+3. Learn about FCP
