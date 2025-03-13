@@ -1,8 +1,6 @@
 # **Collaborative Filtering with Singular Value Decomposition (SVD)**
 ---
-**Collaborative Filtering (CF)** is a popular approach in recommendation systems where user preferences are analyzed to suggest relevant items. 
-
-- **Singular Value Decomposition (SVD)** is a powerful matrix factorization technique used in **model-based collaborative filtering** to extract latent features from a user-item interaction matrix.
+**Collaborative Filtering (CF)** is a popular approach in recommendation systems where user preferences are analyzed to suggest relevant items. **Singular Value Decomposition (SVD)** is a powerful matrix factorization technique used in **model-based collaborative filtering** to extract latent features from a user-item interaction matrix.
 
 ---
 
