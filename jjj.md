@@ -5,4 +5,7 @@ reporstions of itemas from obserxed data
 
 |ui| are regularization
 
-embeddin rep that been learned via in unsupervised learnong
+embeddin rep that been learned via in unsupervised learning
+
+
+train test split
