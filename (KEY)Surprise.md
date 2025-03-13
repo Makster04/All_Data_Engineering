@@ -54,9 +54,10 @@ from surprise import Reader, Dataset
 from surprise.model_selection import cross_validate, GridSearchCV
 from surprise.prediction_algorithms import SVD, KNNBasic, KNNWithMeans, KNNBaseline
 import numpy as np
+```
 
-# 1. Loading and Preparing Data
-
+### 1. Loading and Preparing Data
+```python
 # Assume we have a CSV file 'ratings.csv' with the format: userID, itemID, rating, timestamp
 # For example:
 # 196,242,3,881250949
@@ -67,9 +68,9 @@ reader = Reader(line_format='user item rating timestamp', sep=',', rating_scale=
 
 # Load the dataset from the file
 data = Dataset.load_from_file('ratings.csv', reader=reader)
-
-# 2. Cross-Validation with Different Algorithms
-
+```
+### 2. Cross-Validation with Different Algorithms
+```python
 # Choose an algorithm, e.g., SVD
 algo_svd = SVD()
 
@@ -83,9 +84,9 @@ algo_knn = KNNBasic()
 cv_results_knn = cross_validate(algo_knn, data, measures=['RMSE', 'MAE'], cv=5, verbose=True)
 print("KNNBasic Cross-validation results:")
 print(cv_results_knn)
-
-# 3. Hyperparameter Tuning with GridSearchCV
-
+```
+### 3. Hyperparameter Tuning with GridSearchCV
+```python
 # Define a parameter grid to search over for the SVD algorithm
 param_grid = {
     'n_factors': [50, 100],  # number of latent factors
@@ -101,9 +102,9 @@ grid_search.fit(data)
 # Get the best score and parameters
 print("Best RMSE score obtained:", grid_search.best_score['rmse'])
 print("Best parameters for SVD:", grid_search.best_params['rmse'])
-
-# 4. Training on Full Trainset and Predicting a Rating
-
+```
+### 4. Training on Full Trainset and Predicting a Rating
+```python
 # Build the full trainset from the dataset
 trainset = data.build_full_trainset()
 
