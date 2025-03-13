@@ -5,25 +5,25 @@ Matrix Factorization is a core technique in **collaborative filtering-based reco
 ---
 
 ## **1. What is Alternating Least Squares (ALS)?**
-ALS is a matrix factorization technique that decomposes a **user-item rating matrix \( R \)** into two lower-dimensional matrices:
+ALS is a matrix factorization technique that decomposes a **user-item rating matrix $$\( R \)$$** into two lower-dimensional matrices:
 
-\[
+$$\[
 R \approx U \times V^T
-\]
+\]$$
 
 where:
-- \( U \) is the **user feature matrix** (\( m \times k \))
-- \( V \) is the **item feature matrix** (\( n \times k \))
-- \( k \) is the number of **latent factors** that capture user and item preferences.
+- $$\( U \)$$ is the **user feature matrix** ($$\( m \times k \)$$)
+- $$\( V \)$$ is the **item feature matrix** ($$\( n \times k \)$$)
+- $$\( k \)$$ is the number of **latent factors** that capture user and item preferences.
 
-Instead of solving for **\( U \) and \( V \) simultaneously**, ALS **alternates** between solving for one while keeping the other fixed, making the optimization problem computationally feasible.
+Instead of solving for **$$\( U \)$$ and $$\( V \)$$ simultaneously**, ALS **alternates** between solving for one while keeping the other fixed, making the optimization problem computationally feasible.
 
 ---
 
 ## **2. How ALS Works**
-1. **Initialize \( U \) and \( V \)** with random values.
-2. **Fix \( V \), solve for \( U \)** by minimizing the least squares error.
-3. **Fix \( U \), solve for \( V \)** by minimizing the least squares error.
+1. **Initialize $$\( U \)$$ and $$\( V \)$$** with random values.
+2. **Fix $$\( V \)$$, solve for $$\( U \)$$** by minimizing the least squares error.
+3. **Fix $$\( U \)$$, solve for $$\( V \)$$** by minimizing the least squares error.
 4. **Repeat** until convergence.
 
 Each step solves a **least squares regression problem**, making ALS an efficient method that can be **parallelized**.
@@ -43,11 +43,11 @@ ALS is closely related to **matrix decomposition** because it **factorizes a lar
 ## **4. Why ALS Can Be Parallelized Efficiently**
 Each step in ALS solves a **linear least squares problem**, which involves computing:
 
-\[
+$$\[
 U_i = (V^T V + \lambda I)^{-1} V^T R_i
-\]
+\]$$
 
-Since each row of \( U \) (or \( V \)) can be updated **independently**, ALS is **highly parallelizable** across multiple CPUs or GPUs.
+Since each row of $$\( U \)$$ (or $$\( V \)$$) can be updated **independently**, ALS is **highly parallelizable** across multiple CPUs or GPUs.
 
 ### **Parallelization Benefits**
 - Each **user**'s preferences are updated **independently**.
@@ -62,15 +62,15 @@ A basic ALS model assumes all interactions are based solely on latent factors. H
 ### **Extended ALS Model with Bias Terms**
 The predicted rating \( \hat{R}_{ij} \) is:
 
-\[
+$$\[
 \hat{R}_{ij} = \mu + b_i + b_j + U_i \cdot V_j^T
-\]
+\]$$
 
 where:
-- \( \mu \) is the **global average rating**.
-- \( b_i \) is the **user bias** (e.g., some users rate generously).
-- \( b_j \) is the **item bias** (e.g., some movies are generally rated higher).
-- \( U_i \cdot V_j^T \) is the interaction between user and item latent factors.
+- $$\( \mu \)$$ is the **global average rating**.
+- $$\( b_i \)$$ is the **user bias** (e.g., some users rate generously).
+- $$\( b_j \)$$ is the **item bias** (e.g., some movies are generally rated higher).
+- $$\( U_i \cdot V_j^T \)$$ is the interaction between user and item latent factors.
 
 Bias terms help when:
 - Some users rate **consistently high or low**.
