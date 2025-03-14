@@ -179,7 +179,7 @@ plt.legend()
 plt.show()
 ```
 <img src="https://github.com/user-attachments/assets/1ec4eece-0c21-4d31-bb6c-d65914e7b359" width="500" />
-
+---
 ### **Explanation of Each Step**
 1. **Dendrogram Analysis**:  
    - The **dendrogram** shows how clusters are merged at different distances.  
@@ -193,7 +193,32 @@ plt.show()
    - Data points are colored based on their assigned clusters.
 
 ---
+Here is a Clustergram of it
+```python
+# Importing necessary libraries
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import scipy.cluster.hierarchy as sch
+from sklearn.datasets import make_blobs
 
+# Generating synthetic dataset
+X, _ = make_blobs(n_samples=200, centers=3, random_state=42, cluster_std=1.2)
+
+# Creating a DataFrame
+df = pd.DataFrame(X, columns=['Feature 1', 'Feature 2'])
+
+# Creating a clustergram (clustered heatmap)
+sns.clustermap(df, method='ward', cmap='viridis', figsize=(10, 8))
+
+# Displaying the plot
+plt.show()
+```
+Here's the **clustergram (clustered heatmap)** visualizing hierarchical clustering combined with the intensity of your synthetic data. Rows represent data points, columns represent features, and the dendrograms indicate clusters and similarities across data points and features.
+<img src="https://github.com/user-attachments/assets/c77bb8e0-b663-4933-a598-6e27ff00f995" width="500" />
+
+---
 ## Evaluating Hierarchical Clustering
 To assess the performance of the clustering model, we can use the following evaluation metrics:
 
