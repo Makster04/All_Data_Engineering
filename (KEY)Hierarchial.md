@@ -2,6 +2,8 @@
 
 Hierarchical Clustering is an unsupervised machine learning algorithm used to group similar data points into clusters. Unlike K-Means, it does not require specifying the number of clusters beforehand. Instead, it creates a tree-like structure (dendrogram) that helps determine the optimal number of clusters.
 
+---
+
 ### What is Hierarchical Clustering?
 
 Hierarchical clustering builds nested clusters by either:
@@ -10,6 +12,8 @@ Hierarchical clustering builds nested clusters by either:
 2. **Divisive Approach (Top-Down)**: Starts with all data points in a single cluster and splits them into smaller clusters recursively.
 
 Hierarchical clustering is widely used in market segmentation, image analysis, and gene expression data classification.
+
+---
 
 ## The Process Behind Hierarchical Clustering
 
@@ -34,6 +38,8 @@ Divisive Hierarchical Clustering follows a **top-down** approach. The process pr
 
 The divisive approach is computationally expensive compared to agglomerative clustering because it requires evaluating multiple possible splits at each step.
 
+---
+
 ### Types of Linkage Criteria in Hierarchical Agglomerative Clustering
 
 There are three common linkage methods used to determine the distance between clusters:
@@ -46,6 +52,8 @@ There are three common linkage methods used to determine the distance between cl
 
 A **dendrogram** is a tree-like diagram that represents the merging process in hierarchical clustering. It provides a visual summary of the clustering process and helps determine the optimal number of clusters by identifying a cutoff threshold.
 
+---
+
 ## How is Hierarchical Clustering Different from K-Means?
 
 | Feature                      | Hierarchical Clustering                                     | K-Means Clustering                                    |
@@ -56,6 +64,8 @@ A **dendrogram** is a tree-like diagram that represents the merging process in h
 | **Computational Complexity** | More expensive (O(n²) or O(n³))                             | More efficient (O(n))                                 |
 | **Handling of Outliers**     | Better at handling outliers                                 | Sensitive to outliers                                 |
 | **Scalability**              | Slow for large datasets                                     | Works well for large datasets                         |
+
+---
 
 ## Steps in Hierarchical Clustering Algorithm (Agglomerative)
 
@@ -72,6 +82,8 @@ A **dendrogram** is a tree-like diagram that represents the merging process in h
 4. **Recursively Split Sub-clusters**: Continue breaking down each sub-cluster into smaller clusters using the same criteria.
 5. **Repeat Until Desired Number of Clusters is Reached**: The process stops when each point is in its own cluster or a predefined stopping condition is met.
 6. **Visualize Using a Dendrogram**: The hierarchical structure is represented in a dendrogram for interpretation.
+
+---
 
 ## Python Implementation of Hierarchical Clustering
 
@@ -135,6 +147,8 @@ from sklearn.metrics import silhouette_score
 silhouette_avg = silhouette_score(X, clusters)
 print(f"Silhouette Score: {silhouette_avg:.4f}")
 ```
+
+---
 
 ## Advantages and Disadvantages of Hierarchical Clustering
 ### **Advantages:**
