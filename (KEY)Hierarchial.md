@@ -23,6 +23,8 @@ There are three common linkage methods used to determine the distance between cl
 
 ### Purpose of a Dendrogram
 A **dendrogram** is a tree-like diagram that represents the merging process in hierarchical clustering. It provides a visual summary of the clustering process and helps determine the optimal number of clusters by identifying a cutoff threshold.
+![image](https://github.com/user-attachments/assets/99236066-a02f-48f0-a62e-4b41bef8882a)
+
 
 ## How is Hierarchical Clustering Different from K-Means?
 | Feature | Hierarchical Clustering | K-Means Clustering |
