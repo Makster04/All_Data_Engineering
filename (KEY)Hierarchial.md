@@ -1,5 +1,5 @@
 ## Hierarchical Clustering Overview
-Hierarchical Clustering is an unsupervised machine learning algorithm used to group similar data points into clusters. Unlike K-Means, it does not require specifying the number of clusters beforehand. Instead, it creates a tree-like structure (dendrogram) that helps determine the optimal number of clusters.
+**Hierarchical Clustering** is an unsupervised machine learning algorithm used to group similar data points into clusters. Unlike K-Means, it does not require specifying the number of clusters beforehand. Instead, it creates a tree-like structure (dendrogram) that helps determine the optimal number of clusters.
 
 ### What is Hierarchical Clustering?
 Hierarchical clustering builds nested clusters by either:
