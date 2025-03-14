@@ -135,6 +135,8 @@ plt.ylabel("Feature 2")
 plt.title("Dataset for Clustering")
 plt.show()
 ```
+![image](https://github.com/user-attachments/assets/c8295f61-cbcd-45ee-9313-3e7997abe52e)
+
 
 #### **Step 3: Compute the Distance Matrix & Plot Dendrogram**
 ```python
@@ -149,6 +151,8 @@ plt.ylabel('Euclidean Distance')
 plt.show()
 ```
 - The **dendrogram** helps determine the optimal number of clusters by looking at the longest vertical line that can be cut without crossing horizontal lines.
+![image](https://github.com/user-attachments/assets/6598687a-ea3a-4fa1-bc8a-9ea25a8cbfc7)
+
 
 #### **Step 4: Perform Hierarchical Clustering**
 ```python
@@ -175,6 +179,7 @@ plt.title("Clusters Identified by Hierarchical Clustering")
 plt.legend()
 plt.show()
 ```
+![image](https://github.com/user-attachments/assets/1ec4eece-0c21-4d31-bb6c-d65914e7b359)
 
 ### **Explanation of Each Step**
 1. **Dendrogram Analysis**:  
@@ -191,22 +196,42 @@ plt.show()
 ---
 
 ## Evaluating Hierarchical Clustering
-### 1. **Cophenetic Correlation Coefficient**
-Measures how well the hierarchical clustering preserves the original distances.
-```python
-from scipy.spatial.distance import pdist
-from scipy.cluster.hierarchy import cophenet
+To assess the performance of the clustering model, we can use the following evaluation metrics:
 
-coph_corr, _ = cophenet(linkage_matrix, pdist(X))
-print(f"Cophenetic Correlation Coefficient: {coph_corr:.4f}")
+1. **Silhouette Score**  
+   - Measures how well-separated the clusters are.
+   - Range: $$\(-1\)$$ (poor separation) to $$\(1\)$$ (clear separation).
+2. **Davies-Bouldin Index**  
+   - Lower values indicate better clustering quality.
+3. **Calinski-Harabasz Index**  
+   - Higher values indicate better clustering.
+4. **Inertia (Within-Cluster Sum of Squares - WCSS)**  
+   - Measures compactness within clusters.
+
+Results:
+```python
+from sklearn.metrics import silhouette_score, davies_bouldin_score, calinski_harabasz_score
+
+# Compute evaluation metrics
+silhouette_avg = silhouette_score(X, y_hc)
+davies_bouldin = davies_bouldin_score(X, y_hc)
+calinski_harabasz = calinski_harabasz_score(X, y_hc)
+
+# Display results
+evaluation_results = pd.DataFrame({
+    "Metric": ["Silhouette Score", "Davies-Bouldin Index", "Calinski-Harabasz Index"],
+    "Value": [silhouette_avg, davies_bouldin, calinski_harabasz]
+})
+
+import ace_tools as tools
+tools.display_dataframe_to_user(name="Hierarchical Clustering Evaluation", dataframe=evaluation_results)
 ```
-
-### 2. **Silhouette Score**
-Evaluates how well data points fit within their assigned clusters.
-```python
-from sklearn.metrics import silhouette_score
-silhouette_avg = silhouette_score(X, clusters)
-print(f"Silhouette Score: {silhouette_avg:.4f}")
+```
+Result
+                    Metric        Value
+0         Silhouette Score     0.816140
+1     Davies-Bouldin Index     0.264168
+2  Calinski-Harabasz Index  2392.312365
 ```
 
 ---
