@@ -38,6 +38,12 @@ Divisive Hierarchical Clustering follows a **top-down** approach. The process pr
 
 The divisive approach is computationally expensive compared to agglomerative clustering because it requires evaluating multiple possible splits at each step.
 
+#### Comparison:
+- **Agglomerative Clustering** starts with individual points and progressively merges them into larger clusters, forming a bottom-up dendrogram.
+- **Divisive Clustering (simulated)** starts with all points in one cluster and recursively splits them into smaller groups, forming a top-down dendrogram.
+![output (5)](https://github.com/user-attachments/assets/9bc2234d-a05a-4236-b4a0-4d7b1f6a3f52)
+
+
 ---
 
 ### Types of Linkage Criteria in Hierarchical Agglomerative Clustering
@@ -47,6 +53,7 @@ There are three common linkage methods used to determine the distance between cl
 1. **Single Linkage**: Uses the smallest distance between any two points in two different clusters. This results in elongated and chain-like clusters.
 2. **Complete Linkage**: Uses the largest distance between any two points in two different clusters. This results in compact and well-separated clusters.
 3. **Average Linkage**: Uses the average of all pairwise distances between points in two different clusters. It provides a balance between single and complete linkage.
+![image](https://github.com/user-attachments/assets/d802a653-69b4-45cf-b099-b968fd1c83b0)
 
 ### Purpose of a Dendrogram
 
