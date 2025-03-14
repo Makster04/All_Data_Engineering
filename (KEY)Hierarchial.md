@@ -135,7 +135,7 @@ plt.ylabel("Feature 2")
 plt.title("Dataset for Clustering")
 plt.show()
 ```
-![image](https://github.com/user-attachments/assets/c8295f61-cbcd-45ee-9313-3e7997abe52e)
+<img src="https://github.com/user-attachments/assets/c8295f61-cbcd-45ee-9313-3e7997abe52e" width="500" />
 
 
 #### **Step 3: Compute the Distance Matrix & Plot Dendrogram**
@@ -178,7 +178,7 @@ plt.title("Clusters Identified by Hierarchical Clustering")
 plt.legend()
 plt.show()
 ```
-![image](https://github.com/user-attachments/assets/1ec4eece-0c21-4d31-bb6c-d65914e7b359)
+<img src="https://github.com/user-attachments/assets/1ec4eece-0c21-4d31-bb6c-d65914e7b359" width="500" />
 
 ### **Explanation of Each Step**
 1. **Dendrogram Analysis**:  
