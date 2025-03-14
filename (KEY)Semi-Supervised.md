@@ -9,6 +9,7 @@ Semi-supervised learning involves training machine learning models using a small
 
 ### **Look-Alike Models**
 Look-alike modeling is a marketing-focused supervised or semi-supervised learning method used to identify users who resemble existing customers based on user characteristics. It helps businesses target marketing effectively.
+![image](https://github.com/user-attachments/assets/0a15e036-fa40-462d-b665-df5073b1d44e)
 
 ---
 
