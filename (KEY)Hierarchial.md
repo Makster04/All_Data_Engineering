@@ -4,7 +4,7 @@ Hierarchical Clustering is an unsupervised machine learning algorithm used to gr
 ### What is Hierarchical Clustering?
 Hierarchical clustering builds nested clusters by either:
 1. **Agglomerative Approach (Bottom-Up)**: Starts with individual data points as separate clusters and merges the most similar ones iteratively until one cluster remains.
-2. **Divisive Approach (Top-Down)**: Starts with all data points in a single cluster and splits them into smaller clusters recursively.
+2. **Divisive Approach (Top-Down)**: Starts with all data points in a single cluster and splits them into smaller clusters.
 
 Hierarchical clustering is widely used in market segmentation, image analysis, and gene expression data classification.
 
