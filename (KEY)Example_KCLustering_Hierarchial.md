@@ -96,32 +96,14 @@ Both methods are valuable, depending on your specific finance scenario, data ava
 
 ---
 
-# **Real-Life Implementation using Python (Example)**
+Below are clear descriptions of visualization outputs you'd typically get from applying **K-Means** and **Hierarchical Clustering** to the given finance examples:
 
-### **1. K-Means Clustering:**
-```python
-import matplotlib.pyplot as plt
-from sklearn.cluster import KMeans
-import numpy as np
+---
+# Python Examples
+---
 
-# Sample data: Returns and Volatility
-X = np.array([[12,15], [10,14], [25,40], [8,12], [6,10]])
+# 1. **K-Means Clustering Visualization**
 
-kmeans = KMeans(n_clusters=2)
-kmeans.fit(X)
-labels = kmeans.labels_
-
-plt.scatter(X[:,0], X[:,1], c=labels, cmap='viridis', s=150)
-plt.scatter(kmeans.cluster_centers_[:,0], kmeans.cluster_centers_[:,1], c='red', marker='X', s=200)
-plt.xlabel('Returns (%)')
-plt.ylabel('Volatility (%)')
-plt.title('K-Means Clustering: Portfolio Segmentation')
-plt.grid(True)
-plt.show()
-```
-
-### **Output:**
-- A scatter plot with clearly marked clusters and centroids.
 ### **Scenario:** Portfolio Segmentation (Stocks grouped by Volatility vs. Returns)
 
 ### **Visualization: Scatter Plot (Clusters clearly separated by color)**
@@ -155,34 +137,6 @@ Volatility (%)
 
 ---
 
-### **2. Hierarchical Clustering:**
-```python
-import matplotlib.pyplot as plt
-from scipy.cluster.hierarchy import dendrogram, linkage
-import numpy as np
-
-# Sample data: Avg Balance, Transactions, Loan Utilization
-X = np.array([[15000,30,10], [3000,5,80], [25000,40,5], [1000,3,90], [10000,20,20]])
-
-linked = linkage(X, 'ward')
-
-labelList = ['Customer 101','Customer 102','Customer 103','Customer 104','Customer 105']
-
-plt.figure(figsize=(8,5))
-dendrogram(linked,
-           orientation='top',
-           labels=labelList,
-           distance_sort='descending',
-           show_leaf_counts=True)
-plt.title('Hierarchical Clustering: Customer Segmentation')
-plt.xlabel('Customers')
-plt.ylabel('Distance')
-plt.grid(True)
-plt.show()
-```
-
-### **Output:**
-- A dendrogram clearly showing hierarchical groupings of customers.
 # 2. **Hierarchical Clustering Visualization**
 
 ### **Scenario:** Banking Customer Segmentation based on financial behavior (Balances, Transactions, Loans)
@@ -212,6 +166,66 @@ Height (Distance between clusters)
 - Clearly shows how customers naturally group based on similar financial behaviors.
 - High balance, transaction-heavy customers grouped distinctly from lower balance, high loan-utilization customers.
 - Helps banks quickly identify customer segments for targeted marketing and product offerings.
+
+---
+
+# **Real-Life Implementation using Python (Example)**
+
+### **1. K-Means Clustering:**
+```python
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+import numpy as np
+
+# Sample data: Returns and Volatility
+X = np.array([[12,15], [10,14], [25,40], [8,12], [6,10]])
+
+kmeans = KMeans(n_clusters=2)
+kmeans.fit(X)
+labels = kmeans.labels_
+
+plt.scatter(X[:,0], X[:,1], c=labels, cmap='viridis', s=150)
+plt.scatter(kmeans.cluster_centers_[:,0], kmeans.cluster_centers_[:,1], c='red', marker='X', s=200)
+plt.xlabel('Returns (%)')
+plt.ylabel('Volatility (%)')
+plt.title('K-Means Clustering: Portfolio Segmentation')
+plt.grid(True)
+plt.show()
+```
+
+### **Output:**
+- A scatter plot with clearly marked clusters and centroids.
+
+---
+
+### **2. Hierarchical Clustering:**
+```python
+import matplotlib.pyplot as plt
+from scipy.cluster.hierarchy import dendrogram, linkage
+import numpy as np
+
+# Sample data: Avg Balance, Transactions, Loan Utilization
+X = np.array([[15000,30,10], [3000,5,80], [25000,40,5], [1000,3,90], [10000,20,20]])
+
+linked = linkage(X, 'ward')
+
+labelList = ['Customer 101','Customer 102','Customer 103','Customer 104','Customer 105']
+
+plt.figure(figsize=(8,5))
+dendrogram(linked,
+           orientation='top',
+           labels=labelList,
+           distance_sort='descending',
+           show_leaf_counts=True)
+plt.title('Hierarchical Clustering: Customer Segmentation')
+plt.xlabel('Customers')
+plt.ylabel('Distance')
+plt.grid(True)
+plt.show()
+```
+
+### **Output:**
+- A dendrogram clearly showing hierarchical groupings of customers.
 
 ---
 
