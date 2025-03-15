@@ -151,6 +151,7 @@ plt.ylabel('Euclidean Distance')
 plt.show()
 ```
 - The **dendrogram** helps determine the optimal number of clusters by looking at the longest vertical line that can be cut without crossing horizontal lines.
+
 <img src="https://github.com/user-attachments/assets/6598687a-ea3a-4fa1-bc8a-9ea25a8cbfc7" width="500" />
 
 #### **Step 4: Perform Hierarchical Clustering**
