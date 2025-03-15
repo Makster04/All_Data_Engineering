@@ -183,11 +183,17 @@ Height (Distance between clusters)
 
 ## **Key Differences (Summary):**
 
-| Criteria              | K-Means Clustering                | Hierarchical Clustering                             |
-|-----------------------|------------------------------------|----------------------------------------------|
-| Clustering Approach   | Iterative partitioning             | Agglomerative (bottom-up) or divisive (top-down) |
-| Data Size             | Suitable for large datasets        | Usually better for smaller datasets          |
-| Visualization         | Scatter plot (clearly defined clusters) | Dendrogram (shows hierarchy clearly)           |
+| Criteria                 | K-Means Clustering                                 | Hierarchical Clustering                                   |
+|--------------------------|----------------------------------------------------|-----------------------------------------------------------|
+| **Clustering Approach**  | Partitioning (iteratively divides data into K clusters). <br>**Example:** Segmenting customers into 3 groups based on purchasing habits. | Agglomerative (bottom-up) or divisive (top-down). Builds hierarchy through merging or splitting. <br>**Example:** Grouping animal species into taxonomic categories. |
+| **Methodology**          | Iterative optimization of centroid positions. <br>**Example:** Adjusting cluster centroids repeatedly to minimize distance within groups. | Builds nested clusters step-by-step based on distance metrics. <br>**Example:** Merging similar documents gradually based on text similarity. |
+| **Complexity & Speed**   | Computationally efficient, faster. <br>**Example:** Quickly clustering thousands of online users based on browsing behavior. | Computationally intensive, slower. <br>**Example:** Creating a detailed genetic similarity tree from gene-expression data. |
+| **Dataset Size**         | Suitable for large datasets. <br>**Example:** Analyzing customer behavior in large e-commerce databases. | Better suited for smaller datasets. <br>**Example:** Studying gene clusters in a small biological dataset. |
+| **Number of Clusters**   | Requires predefined number of clusters (k). <br>**Example:** Deciding beforehand that customers will be grouped into 5 segments. | Does not require predefined clusters; can decide post-analysis. <br>**Example:** Deciding the number of natural clusters after reviewing a dendrogram. |
+| **Visualization Output** | Scatter plot with clear partitions. <br>**Example:** Visualizing clustered customer segments on a 2D scatter plot based on income and age. | Dendrogram (tree-like hierarchical structure). <br>**Example:** Representing organizational structures or evolutionary trees. |
+| **Flexibility**          | Less flexible due to fixed k. <br>**Example:** Having difficulty adjusting clusters when the number of customer groups changes. | More flexible; allows analysis of multiple clustering levels. <br>**Example:** Easily selecting different numbers of clusters from a single dendrogram. |
+| **Sensitivity to Outliers**| Sensitive to outliers, as they can influence clusters significantly. <br>**Example:** A single outlier purchase drastically shifting a customer centroid. | Less sensitive; outliers tend to form their own small clusters. <br>**Example:** Rare animal species forming separate branches in a dendrogram. |
+| **Interpretability**     | Simple and straightforward interpretation. <br>**Example:** Clearly explaining customer groups based on simple centroid characteristics (average income, spending). | Rich, detailed hierarchical interpretation. <br>**Example:** Interpreting nuanced relationships between species based on their positions in a hierarchy. |
 
 ---
 
