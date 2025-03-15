@@ -8,13 +8,13 @@ An investment management firm wants to categorize stocks based on similar financ
 
 ### **Steps:**
 
-**Step 1: Data Collection**  
+1. **Step 1: Data Collection**  
 Collect stock performance data:
 - Annual return (%)
 - Volatility (%)
 - Dividend yield (%)
 
-**Step 2: Data Preparation**  
+2. **Step 2: Data Preparation**  
 Normalize these data points for consistency.
 
 | Stock | Return (%) | Volatility (%) | Dividend Yield (%) |
@@ -25,17 +25,17 @@ Normalize these data points for consistency.
 | PG    | 8%         | 12%            | 2.8%                |
 | KO    | 6%         | 10%            | 3.0%                |
 
-**Step 3: Apply K-Means Clustering**  
+3. **Step 3: Apply K-Means Clustering**  
 Using normalized data, group stocks into clusters (e.g., 2 clusters):
 
-- **Cluster 1 (High-Risk, High-Return):**
-  - Tesla (TSLA)
+**Cluster 1 (High-Risk, High-Return):**
+- Tesla (TSLA)
 
-- **Cluster 2 (Stable, Moderate-Return):**
-  - Apple (AAPL)
-  - Microsoft (MSFT)
-  - Procter & Gamble (PG)
-  - Coca-Cola (KO)
+**Cluster 2 (Stable, Moderate-Return):**
+- Apple (AAPL)
+- Microsoft (MSFT)
+- Procter & Gamble (PG)
+- Coca-Cola (KO)
 
 ### **Interpretation:**
 - **Cluster 1**: Suitable for aggressive investors seeking high growth and accepting higher volatility.
@@ -95,13 +95,13 @@ A retail bank aims to segment customers based on financial behaviors (monthly ba
 
 ### **Steps:**
 
-**Step 1: Data Collection**  
+1. **Step 1: Data Collection**  
 Gather customer account behavior data:
 - Average Monthly Account Balance
 - Monthly Transactions Count
 - Loan Utilization (% of total credit limit used)
 
-**Step 2: Data Preparation**  
+2. **Step 2: Data Preparation**  
 Normalize data for comparability:
 
 | Customer ID | Avg Balance ($) | Transactions | Loan Utilization (%) |
@@ -112,7 +112,7 @@ Normalize data for comparability:
 | 104         | 1,000           | 3            | 90%                  |
 | 105         | 10,000          | 20           | 20%                  |
 
-**Step 3: Apply Hierarchical Clustering**  
+3. **Step 3: Apply Hierarchical Clustering**  
 Use Ward’s linkage to create a dendrogram, grouping customers by similarity:
 
 ```
