@@ -180,6 +180,7 @@ plt.legend()
 plt.show()
 ```
 <img src="https://github.com/user-attachments/assets/1ec4eece-0c21-4d31-bb6c-d65914e7b359" width="500" />
+
 ---
 ### **Explanation of Each Step**
 1. **Dendrogram Analysis**:  
