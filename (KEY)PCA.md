@@ -170,26 +170,34 @@ plt.ylabel('Principal Component 2')
 plt.title('PCA Projection of Iris Dataset')
 plt.colorbar(label='Target Classes')
 plt.show()
-
-# Step 5: Explained Variance Ratio
-print("Explained Variance Ratio:", pca.explained_variance_ratio_)
-```
-```python
-[0.72962445, 0.22850762]
 ```
 ![image](https://github.com/user-attachments/assets/c4a54f02-0795-4f82-9b00-43e3b21936f5)
 
 ---
-## Comparison: NumPy vs Scikit-learn
+## Determine Optimal Number of Components (Explained Variance):
+To find the optimal number of components, examine the explained variance:
 
-| Step                 | NumPy Implementation                  | Scikit-learn Implementation  |
-|----------------------|--------------------------------------|------------------------------|
-| Standardization     | Manual mean & std-dev computation   | StandardScaler()             |
-| Covariance Matrix   | np.cov()                             | Handled internally by PCA   |
-| Eigenvalues/Vectors | np.linalg.eig()                      | Handled internally by PCA   |
-| Sorting Eigenvectors| np.argsort()                         | Handled internally by PCA   |
-| Projection         | Matrix multiplication                | pca.fit_transform()         |
+```python
+# PCA with all components
+pca_full = PCA()
+pca_full.fit(X_scaled)
 
+# Explained variance ratio
+explained_variance = pca_full.explained_variance_ratio_
+cum_explained_variance = np.cumsum(explained_variance)
+
+# Plot cumulative explained variance
+plt.figure(figsize=(8, 5))
+plt.plot(cum_explained_variance, marker='o', linestyle='--')
+plt.xlabel('Number of Components')
+plt.ylabel('Cumulative Explained Variance')
+plt.title('Explained Variance vs. Number of PCA Components')
+plt.grid()
+plt.show()
+```
+Interpretation:
+Select the number of components where you retain approximately 90-95% of variance.
+![image](https://github.com/user-attachments/assets/1cebf942-632a-43e1-928e-655198664458)
 ---
 
 ## 3. Comparison and Contrast of PCA with Other Methods
@@ -206,10 +214,6 @@ print("Explained Variance Ratio:", pca.explained_variance_ratio_)
 PCA is best suited for cases where the primary goal is to **reduce features while retaining variance**, while methods like t-SNE are more for **visualizing clusters** and LDA is for **supervised dimensionality reduction**.
 
 ---
-
-
-
-
 
 ## Conclusion
 - PCA is a **linear** technique for dimensionality reduction.
