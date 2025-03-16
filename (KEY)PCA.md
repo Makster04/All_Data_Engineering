@@ -41,6 +41,13 @@ X_standardized = (X - mean) / std_dev  # Standardization formula
 print("Mean after standardization:\n", np.mean(X_standardized, axis=0))
 print("Standard deviation after standardization:\n", np.std(X_standardized, axis=0))
 ```
+```
+# Mean after standardization (≈ 0):
+[-1.69031455e-15, -1.84297022e-15, -1.69864123e-15, -1.40924309e-15]
+
+# Standard deviation after standardization (≈ 1):
+[1., 1., 1., 1.]
+```
 
 ---
 
@@ -52,6 +59,12 @@ This matrix tells us how much each feature varies in relation to others.
 cov_matrix = np.cov(X_standardized.T)  # Transpose because np.cov expects variables as rows
 
 print("Covariance Matrix:\n", cov_matrix)
+```
+```
+[[ 1.00671141, -0.11835884,  0.87760447,  0.82343066],
+ [-0.11835884,  1.00671141, -0.43131554, -0.36858315],
+ [ 0.87760447, -0.43131554,  1.00671141,  0.96932762],
+ [ 0.82343066, -0.36858315,  0.96932762,  1.00671141]]
 ```
 
 ---
@@ -68,6 +81,10 @@ print("Eigenvectors:\n", eigenvectors)
 ```
 - **Eigenvalues** indicate how much variance is captured by each principal component.
 - **Eigenvectors** represent the direction of these components.
+```
+# Eigenvalues (unsorted):
+[2.93808505, 0.9201649 , 0.14774182, 0.02085386]
+```
 
 ---
 
@@ -83,6 +100,15 @@ eigenvectors_sorted = eigenvectors[:, sorted_indices]  # Sort eigenvectors accor
 
 print("Sorted Eigenvalues:\n", eigenvalues_sorted)
 print("Sorted Eigenvectors:\n", eigenvectors_sorted)
+```
+```
+# Sorted Eigenvalues (descending order):
+[2.93808505, 0.9201649 , 0.14774182, 0.02085386]
+# Sorted Eigenvectors:
+[[ 0.52106591, -0.37741762, -0.71956635,  0.26128628],
+ [-0.26934744, -0.92329566,  0.24438178, -0.12350962],
+ [ 0.5804131 , -0.02449161,  0.14212637, -0.80144925],
+ [ 0.56485654, -0.06694199,  0.63427274,  0.52359713]]
 ```
 
 ---
@@ -108,6 +134,10 @@ plt.ylabel('Principal Component 2')
 plt.title('PCA Projection of Iris Dataset')
 plt.colorbar(label='Target Classes')
 plt.show()
+```
+```
+# PCA data shape (manual calculation):
+(150, 2)
 ```
 ---
 
@@ -143,6 +173,9 @@ plt.show()
 
 # Step 5: Explained Variance Ratio
 print("Explained Variance Ratio:", pca.explained_variance_ratio_)
+```
+```
+[0.72962445, 0.22850762]
 ```
 ---
 ## Comparison: NumPy vs Scikit-learn
