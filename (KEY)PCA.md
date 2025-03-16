@@ -81,7 +81,7 @@ print("Eigenvectors:\n", eigenvectors)
 ```
 - **Eigenvalues** indicate how much variance is captured by each principal component.
 - **Eigenvectors** represent the direction of these components.
-```
+```python
 # Eigenvalues (unsorted):
 [2.93808505, 0.9201649 , 0.14774182, 0.02085386]
 ```
@@ -101,7 +101,7 @@ eigenvectors_sorted = eigenvectors[:, sorted_indices]  # Sort eigenvectors accor
 print("Sorted Eigenvalues:\n", eigenvalues_sorted)
 print("Sorted Eigenvectors:\n", eigenvectors_sorted)
 ```
-```
+```python
 # Sorted Eigenvalues (descending order):
 [2.93808505, 0.9201649 , 0.14774182, 0.02085386]
 # Sorted Eigenvectors:
