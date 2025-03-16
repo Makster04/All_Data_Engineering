@@ -135,7 +135,7 @@ plt.title('PCA Projection of Iris Dataset')
 plt.colorbar(label='Target Classes')
 plt.show()
 ```
-```
+```python
 # PCA data shape (manual calculation):
 (150, 2)
 ```
@@ -174,7 +174,7 @@ plt.show()
 # Step 5: Explained Variance Ratio
 print("Explained Variance Ratio:", pca.explained_variance_ratio_)
 ```
-```
+```python
 [0.72962445, 0.22850762]
 ```
 ---
@@ -287,6 +287,8 @@ plt.title('Compressed Image with PCA')
 
 plt.show()
 ```
+![image](https://github.com/user-attachments/assets/c4a54f02-0795-4f82-9b00-43e3b21936f5)
+
 **Takeaway:** PCA can significantly reduce storage size while preserving essential image details.
 
 ## 5. Applications of PCA
