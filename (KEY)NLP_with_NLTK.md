@@ -43,6 +43,17 @@ Common words that do not add much meaning (e.g., "the", "is", "and", "a").
 ### **Bag of Words (BoW)**
 A text representation method where words are converted into numerical vectors.
 
+### **Sentiment Analysis**  
+Determining the emotional tone of text.  
+- **Positive Sentiment**: Text expresses favorable emotions.  
+- **Negative Sentiment**: Text conveys unfavorable emotions.  
+- **Neutral Sentiment**: Text does not express strong emotions.  
+
+### **Parsing and Syntax**  
+Analyzing the grammatical structure of a sentence.  
+- **Parsing**: Breaking down a sentence into its components based on grammar rules.  
+- **Syntax Analysis**: Checking if a sentence follows correct grammatical structure.
+
 ---
 
 ## **3. Coding with NLTK**
@@ -74,6 +85,10 @@ sentence_tokens = sent_tokenize(text)
 print("Word Tokenization:", word_tokens)
 print("Sentence Tokenization:", sentence_tokens)
 ```
+```
+Word Tokenization: ['Natural', 'Language', 'Processing', '(', 'NLP', ')', 'is', 'an', 'exciting', 'field', '.', 'It', 'enables', 'computers', 'to', 'understand', 'human', 'language', '.']
+Sentence Tokenization: ['Natural Language Processing (NLP) is an exciting field.', 'It enables computers to understand human language.']
+```
 
 ---
 
@@ -85,6 +100,9 @@ stop_words = set(stopwords.words('english'))
 filtered_words = [word for word in word_tokens if word.lower() not in stop_words]
 
 print("Filtered Words (Without Stopwords):", filtered_words)
+```
+```
+Filtered Words (Without Stopwords): ['Natural', 'Language', 'Processing', '(', 'NLP', ')', 'exciting', 'field', '.', 'enables', 'computers', 'understand', 'human', 'language', '.']
 ```
 
 ---
@@ -106,6 +124,21 @@ print("\nLemmatization Results:")
 for word in words:
     print(word, "→", lemmatizer.lemmatize(word))
 ```
+```
+# Stemming
+Stemming Results:
+running → run
+flies → fli
+easily → easili
+better → better
+
+# Lemmatization
+Lemmatization Results:
+running → running
+flies → fly
+easily → easily
+better → better
+```
 
 ---
 
@@ -115,6 +148,9 @@ from nltk import pos_tag
 
 pos_tags = pos_tag(word_tokens)
 print("POS Tags:", pos_tags)
+```
+```
+POS Tags: [('Natural', 'JJ'), ('Language', 'NNP'), ('Processing', 'NNP'), ('(', '('), ('NLP', 'NNP'), (')', ')'), ('is', 'VBZ'), ('an', 'DT'), ('exciting', 'JJ'), ('field', 'NN'), ('.', '.'), ('It', 'PRP'), ('enables', 'VBZ'), ('computers', 'NNS'), ('to', 'TO'), ('understand', 'VB'), ('human', 'JJ'), ('language', 'NN'), ('.', '.')]
 ```
 
 ---
@@ -128,6 +164,27 @@ nltk.download('words')
 
 ner_tree = ne_chunk(pos_tags)
 print(ner_tree)
+```
+```
+(S
+  (GPE Natural/NNP)
+  Language/NNP
+  Processing/NNP
+  (ORGANIZATION NLP/NNP)
+  is/VBZ
+  an/DT
+  exciting/JJ
+  field/NN
+  ./.
+  It/PRP
+  enables/VBZ
+  computers/NNS
+  to/TO
+  understand/VB
+  human/JJ
+  language/NN
+  ./.)
+
 ```
 
 ---
@@ -149,7 +206,71 @@ print("Bag of Words Representation:")
 print(X.toarray())
 print("Feature Names:", vectorizer.get_feature_names_out())
 ```
+```
+Bag of Words Representation:
+[[0 0 1 0 0 1 0 0 1]
+ [1 0 0 0 1 1 1 1 0]
+ [0 1 0 1 0 0 1 1 1]]
+Feature Names: ['amazing', 'can', 'human', 'is', 'language', 'love', 'machines', 'natural', 'processing']
+```
 
+### **Example 7: Sentiment Analysis Example (Using `TextBlob`)**
+```python
+from textblob import TextBlob
+
+# Example text
+text = "I love this game! The players are amazing."
+
+# Perform sentiment analysis
+blob = TextBlob(text)
+sentiment_score = blob.sentiment.polarity  # Ranges from -1 (negative) to 1 (positive)
+
+# Determine sentiment category
+if sentiment_score > 0:
+    sentiment = "Positive"
+elif sentiment_score < 0:
+    sentiment = "Negative"
+else:
+    sentiment = "Neutral"
+
+print(f"Sentiment Score: {sentiment_score}, Sentiment: {sentiment}")
+```
+```
+Sentiment Score: 0.75, Sentiment: Positive
+```
+
+### **Example 8: Parsing and Syntax Analysis Example (Using `spacy`)**
+```python
+import spacy
+
+# Load English model
+nlp = spacy.load("en_core_web_sm")
+
+# Example sentence
+sentence = "The quick brown fox jumps over the lazy dog."
+
+# Parse the sentence
+doc = nlp(sentence)
+
+# Print dependency parsing results
+for token in doc:
+    print(f"Word: {token.text}, POS: {token.pos_}, Dependency: {token.dep_}")
+```
+```
+"The quick brown fox jumps over the lazy dog."
+```
+```
+Word: The, POS: DET, Dependency: det
+Word: quick, POS: ADJ, Dependency: amod
+Word: brown, POS: ADJ, Dependency: amod
+Word: fox, POS: NOUN, Dependency: nsubj
+Word: jumps, POS: VERB, Dependency: ROOT
+Word: over, POS: ADP, Dependency: prep
+Word: the, POS: DET, Dependency: det
+Word: lazy, POS: ADJ, Dependency: amod
+Word: dog, POS: NOUN, Dependency: pobj
+Word: ., POS: PUNCT, Dependency: punct
+```
 ---
 
 ## **4. Applications of NLP with NLTK**
