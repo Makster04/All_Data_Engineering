@@ -84,7 +84,7 @@ TF-IDF (**Term Frequency-Inverse Document Frequency**) is a statistical measure 
 
 3. **TF-IDF Score**: The final score for a term is calculated as:
 
-   $$\TF-IDF(t) = TF(t) \times IDF(t)\$$
+   $$TF-IDF(t) = TF(t) \times IDF(t)\$$
 
 A higher TF-IDF score means a term is more important in a specific document.
 
