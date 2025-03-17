@@ -53,6 +53,22 @@ Determining the emotional tone of text.
 Analyzing the grammatical structure of a sentence.  
 - **Parsing**: Breaking down a sentence into its components based on grammar rules.  
 - **Syntax Analysis**: Checking if a sentence follows correct grammatical structure.
+---
+### Table Summary
+
+| **Concept**                   | **Definition**                                                              | **Example**                                              |
+|--------------------------------|----------------------------------------------------------------------------|----------------------------------------------------------|
+| **Tokenization**               | Breaking text into words or sentences.                                     | "I love NLP!" → `["I", "love", "NLP!"]` (Word Tokenization) |
+| **Word Tokenization**          | Splitting text into individual words.                                      | "ChatGPT is great." → `["ChatGPT", "is", "great", "."]`  |
+| **Sentence Tokenization**      | Splitting text into sentences.                                             | "I love NLP. It's fascinating!" → `["I love NLP.", "It's fascinating!"]` |
+| **Stemming**                   | Reducing words to their root form.                                         | "Running", "runner" → "run"                             |
+| **Lemmatization**              | Converts words to their base form using a dictionary.                      | "Better" → "Good", "Am" → "Be"                          |
+| **Part-of-Speech (POS) Tagging** | Assigning grammatical labels to words.                                    | "The dog runs." → `("The", DET), ("dog", NOUN), ("runs", VERB)` |
+| **Named Entity Recognition (NER)** | Identifying entities such as names, locations, and organizations.        | "Apple Inc. is based in California." → `("Apple Inc.", ORG), ("California", LOC)` |
+| **Stopwords**                  | Common words that do not add much meaning.                                | "The cat is on the mat." (Stopwords: "the", "is", "on") |
+| **Bag of Words (BoW)**         | A text representation method where words are converted into numerical vectors. | "I love NLP" → `{I: 1, love: 1, NLP: 1}` |
+| **Sentiment Analysis**         | Determining the emotional tone of text.                                   | "I love this product!" → **Positive Sentiment** |
+| **Parsing and Syntax**         | Analyzing the grammatical structure of a sentence.                        | "The quick brown fox jumps over the lazy dog." (Parsed tree) |
 
 ---
 
