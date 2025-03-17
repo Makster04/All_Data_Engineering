@@ -5,7 +5,7 @@ Natural Language Processing (NLP) is a field of artificial intelligence (AI) tha
 ### 1. **Stemming and Lemmatization**
 Stemming and lemmatization are text normalization techniques that reduce words to their base or root form.
 
-**Stemming**: This method chops off word suffixes using heuristic rules without considering the word's actual meaning. It often results in non-dictionary words.
+**Stemming**: This method chops off word suffixes using heuristic rules without considering the word's actual meaning. *(removing the ends of words where the end signals some sort of derivational change to the word)* It often results in non-dictionary words.
   - **Example:** "running" → "run", "flies" → "fli" (incorrect stem)
   - **Common algorithm:** **Porter Stemmer**, **Snowball Stemmer**
 
