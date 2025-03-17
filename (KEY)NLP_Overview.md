@@ -5,15 +5,47 @@ Natural Language Processing (NLP) is a field of artificial intelligence (AI) tha
 ### 1. **Stemming and Lemmatization**
 Stemming and lemmatization are text normalization techniques that reduce words to their base or root form.
 
-- **Stemming**: This method chops off word suffixes using heuristic rules without considering the word's actual meaning. It often results in non-dictionary words.
-  - Example: "running" → "run", "flies" → "fli" (incorrect stem)
-  - Common algorithm: **Porter Stemmer**, **Snowball Stemmer**
+**Stemming**: This method chops off word suffixes using heuristic rules without considering the word's actual meaning. It often results in non-dictionary words.
+  - **Example:** "running" → "run", "flies" → "fli" (incorrect stem)
+  - **Common algorithm:** **Porter Stemmer**, **Snowball Stemmer**
 
-- **Lemmatization**: This method converts words to their base form (lemma) using vocabulary and morphological analysis, ensuring the output is a valid word.
-  - Example: "running" → "run", "flies" → "fly"
-  - Common algorithm: **WordNet Lemmatizer**
+  | Rule    | Example             |
+|---------|---------------------|
+| **SSES → SS** | caresses → caress |
+| **IES → I**   | ponies → poni     |
+| **SS → SS**   | caress → caress   |
+| **S →** S     | cats → cat        |
+
+
+**Lemmatization**: This method converts words to their base form (lemma) using vocabulary and morphological analysis, ensuring the output is a valid word. Attempts to reduce each word to its most basic form, or lemma.
+  - **Example:** "running" → "run", "flies" → "fly"
+  - **Common algorithm:** **WordNet Lemmatizer**
+
+ | Word    | Stem | Lemma |
+|---------|--------|----|
+| **Studies** | Studi | Study |
+| **Studying** | Study | Study |
+  
+---
+
+  Here's a table comparing **stemming** and **lemmatization** with examples:
+
+| Feature        | Stemming                             | Lemmatization                        |
+|---------------|--------------------------------------|--------------------------------------|
+| Definition    | Reduces a word to its root by removing suffixes, without considering context. | Converts a word to its base form (lemma) using vocabulary and morphological analysis. |
+| Algorithm    | Uses rules like removing common suffixes (e.g., *ing*, *ed*). | Uses a dictionary to find the correct lemma. |
+| Speed        | Faster, as it applies simple rules. | Slower, as it considers word meaning. |
+| Accuracy     | Less accurate; may produce non-existent words. | More accurate; results in valid words. |
+| Example 1 (run) | Running → **Run** | Running → **Run** |
+| Example 2 (better) | Better → **Better** (unchanged) | Better → **Good** (correct lemma) |
+| Example 3 (studying) | Studying → **Studi** | Studying → **Study** |
+| Example 4 (flies) | Flies → **Fli** | Flies → **Fly** (correct base form) |
+
+---
+Stemming often results in non-dictionary words (*studi*, *fli*), whereas lemmatization ensures the word is meaningful in the language.
 
 Lemmatization is more accurate than stemming but computationally expensive.
+---
 
 ### 2. **Stop Words and Their Removal**
 Stop words are commonly used words in a language (e.g., "the", "is", "and") that do not contribute meaningful information to text analysis. They are frequently removed in NLP tasks to reduce dimensionality and improve computational efficiency.
