@@ -68,8 +68,27 @@ Sure! Here is the categorized list with the current definitions:
 - ```Ground-truth clusters```
 - ```clustering```
 - ```Variance Ratio```
-- ``` Calinski Harabasz Score```
+- ```Calinski Harabasz Score```
 - ```Elbow Plot```
+- ```Feature Selection```
+- ``
+- ```NMF```:
+- ```TSNE```:
+Each column of XL Term frequency for a given document
+W = Word Distriibuton for the topic (Weight of words we back out as the )
+Minimizing loss subjext to constraint:
+- Oftern leads to topics that are interpretable (W matrix)
+- Topic Breakdown for each documents (H matrix)
+Finding W and H is hard. You can use Gradient descant but since its Constraint W and H
+
+
+Higher Level anaylitics on these concerns:
+- Distribution of concerns.issues
+- Concerns/issues
+
+
+
+
 
 
 
