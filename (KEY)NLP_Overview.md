@@ -73,17 +73,23 @@ TF-IDF (**Term Frequency-Inverse Document Frequency**) is a statistical measure 
 
 #### **Components of TF-IDF:**
 1. **Term Frequency (TF)**: Measures how frequently a term appears in a document.
-   \[
+
+   $$
    TF(t) = \frac{\text{Number of times term } t \text{ appears in a document}}{\text{Total number of terms in the document}}
-   \]
+   $$
+
 2. **Inverse Document Frequency (IDF)**: Measures how important a term is by penalizing common words that appear across many documents.
-   \[
+
+   $$
    IDF(t) = \log\left(\frac{\text{Total number of documents}}{\text{Number of documents containing term } t}\right)
-   \]
+   $$
+
 3. **TF-IDF Score**: The final score for a term is calculated as:
-   \[
+
+   $$
    TF-IDF(t) = TF(t) \times IDF(t)
-   \]
+   $$
+
 A higher TF-IDF score means a term is more important in a specific document.
 
 ### 5. **Count Vectorization and Bag of Words (BoW)**
