@@ -56,8 +56,8 @@ print(f"Pipeline Model Accuracy: {accuracy:.2f}")
 
 ### **Advanced: Adding Feature Selection and Hyperparameter Tuning**
 We can extend pipelines to include:
-- **Feature Selection**
-- **Hyperparameter tuning using GridSearchCV**
+- **Feature Selection**: The process of choosing the most important variables from a dataset to improve model performance, reduce complexity, and prevent overfitting by removing irrelevant or redundant features.
+- **Hyperparameter tuning using GridSearchCV**: Method to find the best model settings by testing multiple hyperparameter combinations, evaluating performance using cross-validation, and selecting the optimal configuration to improve accuracy and generalization.
 
 ```python
 from sklearn.feature_selection import SelectKBest, f_classif
