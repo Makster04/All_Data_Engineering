@@ -1,3 +1,12 @@
+### NN relation to logistic regression
+- Complexity and increase in representional power...
+- 
+### What does a single node do
+
+### Single Hidden layer
+- square bracket superscript index for layer...
+- Means 
+
 ## **Overview of Neural Networks**
 
 A **Neural Network** is a machine learning model inspired by the structure and function of the human brain. It consists of layers of interconnected **neurons** that process and learn from data. Neural networks are particularly powerful for tasks such as image recognition, natural language processing, and time-series forecasting.
