@@ -74,6 +74,31 @@ Sure! Here is the categorized list with the current definitions:
 - ``
 - ```NMF```:
 - ```TSNE```:
+
+- ```Neutral Network```
+- ```Objective Function```
+- ```Vector```
+- ```Weights```
+- ```Bias Term```
+- ```RegEx```
+- ```NLP```
+- ```Word Vectorization```
+- ```Ensembes```
+- ```PCA```
+- ```Matrix```
+- ```Weight Matrix```
+- ```Generalization```
+- ```Aggregation```
+- ```Sigmoid```
+- ```Compute```
+- ```Corresponding Bias Vector```
+- ```Hidden Layers```
+- ```non-linear activation```
+
+
+We are performing logistic regression over hidden features (We using derived features that have been trained)
+---
+
 Each column of XL Term frequency for a given document
 W = Word Distriibuton for the topic (Weight of words we back out as the )
 Minimizing loss subjext to constraint:
@@ -87,7 +112,9 @@ Higher Level anaylitics on these concerns:
 - Concerns/issues
 
 
-
+- Dimenstions have to match
+- What shapes your weight matrixes have to have
+- 
 
 
 
