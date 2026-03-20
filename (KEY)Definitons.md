@@ -39,13 +39,10 @@
 
 # Evaluation Metrics
 
-- ```Accuracy:``` The proportion of total predictions a model got correct.
-
-**Precision:** Of all items predicted as positive, the proportion that were actually positive.
-
-**Recall:** Of all actual positive items, the proportion the model correctly identified.
-
-**F1 Score:** A metric that balances precision and recall into a single score.
+- ``Accuracy:`` The proportion of total predictions a model got correct.
+- ``Precision:`` Of all items predicted as positive, the proportion that were actually positive.
+- ``Recall:`` Of all actual positive items, the proportion the model correctly identified.
+- ``F1 Score:`` A metric that balances precision and recall into a single score.
 
 **Confusion Matrix:** A table showing correct and incorrect predictions for each class.
 
