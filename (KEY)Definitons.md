@@ -1,8 +1,6 @@
-Absolutely — here’s a cleaned-up, corrected, and more complete version with clearer wording, fewer duplicates, and better organization.
-
 # Machine Learning Concepts & Techniques
 
-- **Supervised Learning:** A machine learning approach where models are trained on labeled data, meaning the correct output is already known, so the model learns to predict future outcomes or classifications.
+- ```Supervised Learning:``` A machine learning approach where models are trained on labeled data, meaning the correct output is already known, so the model learns to predict future outcomes or classifications.
 - **Unsupervised Learning:** A machine learning approach where models are trained on unlabeled data to identify hidden patterns, structures, or groupings without a known target variable.
 - **Cross-Validation:** A model evaluation technique that splits data into multiple parts, or folds, so the model can be trained and tested on different subsets to better measure how well it generalizes.
 - **Train-Test Split:** Dividing a dataset into separate training and testing portions so the model can be evaluated on unseen data.
