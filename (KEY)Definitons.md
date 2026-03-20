@@ -4,33 +4,21 @@ Absolutely — here’s a cleaned-up, corrected, and more complete version with 
 
 - **Supervised Learning:** A machine learning approach where models are trained on labeled data, meaning the correct output is already known, so the model learns to predict future outcomes or classifications.
 - **Unsupervised Learning:** A machine learning approach where models are trained on unlabeled data to identify hidden patterns, structures, or groupings without a known target variable.
-
-**Cross-Validation:** A model evaluation technique that splits data into multiple parts, or folds, so the model can be trained and tested on different subsets to better measure how well it generalizes.
-
-**Train-Test Split:** Dividing a dataset into separate training and testing portions so the model can be evaluated on unseen data.
-
-**Hyperparameter Tuning:** The process of finding the best model settings, such as tree depth or learning rate, to improve performance.
-
-**Decision Boundary:** The line, curve, or surface that separates different classes in a feature space and determines how a model classifies new data points.
-
-**Generalization:** A model’s ability to perform well on new, unseen data rather than only the data it was trained on.
-
-**Overfitting:** When a model learns the training data too closely, including noise and random patterns, and performs poorly on new data.
-
-**Underfitting:** When a model is too simple to capture important patterns in the data and performs poorly even on training data.
-
-**Bias-Variance Tradeoff:** The balance between a model being too simple and too complex, helping avoid underfitting or overfitting.
-
-**Feature Engineering:** Creating new variables or transforming existing ones to improve model performance.
-
-**Feature Selection:** Choosing the most relevant input variables to improve efficiency, interpretability, and model accuracy.
-
-**Model Deployment:** Making a trained machine learning model available for use in real applications.
+- **Cross-Validation:** A model evaluation technique that splits data into multiple parts, or folds, so the model can be trained and tested on different subsets to better measure how well it generalizes.
+- **Train-Test Split:** Dividing a dataset into separate training and testing portions so the model can be evaluated on unseen data.
+- **Hyperparameter Tuning:** The process of finding the best model settings, such as tree depth or learning rate, to improve performance.
+- **Decision Boundary:** The line, curve, or surface that separates different classes in a feature space and determines how a model classifies new data points.
+- **Generalization:** A model’s ability to perform well on new, unseen data rather than only the data it was trained on.
+- **Overfitting:** When a model learns the training data too closely, including noise and random patterns, and performs poorly on new data.
+- **Underfitting:** When a model is too simple to capture important patterns in the data and performs poorly even on training data.
+- **Bias-Variance Tradeoff:** The balance between a model being too simple and too complex, helping avoid underfitting or overfitting.
+- **Feature Engineering:** Creating new variables or transforming existing ones to improve model performance.
+- **Feature Selection:** Choosing the most relevant input variables to improve efficiency, interpretability, and model accuracy.
+- **Model Deployment:** Making a trained machine learning model available for use in real applications.
 
 # Algorithms
 
 **K-Nearest Neighbors (KNN):** A classification or regression algorithm that makes predictions based on the labels or values of the nearest data points.
-
 **Logistic Regression:** A supervised learning algorithm used mainly for classification, predicting the probability that an observation belongs to a specific class.
 
 **Decision Tree:** A machine learning algorithm that splits data into branches based on feature values to make predictions.
