@@ -7,12 +7,12 @@
 - ``Hyperparameter Tuning:`` The process of finding the best model settings, such as tree depth or learning rate, to improve performance.
 - ``Decision Boundary:`` The line, curve, or surface that separates different classes in a feature space and determines how a model classifies new data points.
 - ``Generalization:`` A model’s ability to perform well on new, unseen data rather than only the data it was trained on.
-- **Overfitting:** When a model learns the training data too closely, including noise and random patterns, and performs poorly on new data.
-- **Underfitting:** When a model is too simple to capture important patterns in the data and performs poorly even on training data.
-- **Bias-Variance Tradeoff:** The balance between a model being too simple and too complex, helping avoid underfitting or overfitting.
-- **Feature Engineering:** Creating new variables or transforming existing ones to improve model performance.
-- **Feature Selection:** Choosing the most relevant input variables to improve efficiency, interpretability, and model accuracy.
-- **Model Deployment:** Making a trained machine learning model available for use in real applications.
+- ``Overfitting:`` When a model learns the training data too closely, including noise and random patterns, and performs poorly on new data.
+- ``Underfitting:`` When a model is too simple to capture important patterns in the data and performs poorly even on training data.
+- ``Bias-Variance Tradeoff:`` The balance between a model being too simple and too complex, helping avoid underfitting or overfitting.
+- ``Feature Engineering:`` Creating new variables or transforming existing ones to improve model performance.
+- ``Feature Selection:`` Choosing the most relevant input variables to improve efficiency, interpretability, and model accuracy.
+- ``Model Deployment:`` Making a trained machine learning model available for use in real applications.
 
 # Algorithms
 
