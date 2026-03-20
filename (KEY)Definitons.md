@@ -16,44 +16,30 @@
 
 # Algorithms
 
-**K-Nearest Neighbors (KNN):** A classification or regression algorithm that makes predictions based on the labels or values of the nearest data points.
-**Logistic Regression:** A supervised learning algorithm used mainly for classification, predicting the probability that an observation belongs to a specific class.
-
-**Decision Tree:** A machine learning algorithm that splits data into branches based on feature values to make predictions.
-
-**Random Forest:** An ensemble learning method that builds many decision trees on different subsets of data and combines their predictions to improve accuracy and reduce overfitting.
-
-**Extra Trees (Extremely Randomized Trees):** A tree-based ensemble method similar to random forests, but with more randomness in how splits are chosen, often improving speed and generalization.
-
-**Bagging:** An ensemble method that trains multiple models independently on bootstrapped samples of the data and combines their predictions.
-
-**Gradient Boosting:** An ensemble method where models are built sequentially, with each new model trying to correct the errors of the previous one.
-
-**XGBoost:** An optimized gradient boosting algorithm designed for speed, efficiency, and strong predictive performance.
-
-**K-Means Clustering:** An unsupervised learning algorithm that groups data into a chosen number of clusters by minimizing distance to each cluster center.
-
-**Neural Network:** A model inspired by the human brain that learns patterns through layers of interconnected nodes, or neurons.
+- ``K-Nearest Neighbors (KNN):`` A classification or regression algorithm that makes predictions based on the labels or values of the nearest data points.
+- ``Logistic Regression:`` A supervised learning algorithm used mainly for classification, predicting the probability that an observation belongs to a specific class.
+- ``Decision Tree:`` A machine learning algorithm that splits data into branches based on feature values to make predictions.
+- ``Random Forest:`` An ensemble learning method that builds many decision trees on different subsets of data and combines their predictions to improve accuracy and reduce overfitting.
+- ``Extra Trees (Extremely Randomized Trees):`` A tree-based ensemble method similar to random forests, but with more randomness in how splits are chosen, often improving speed and generalization.
+- ``Bagging:`` An ensemble method that trains multiple models independently on bootstrapped samples of the data and combines their predictions.
+- ``Gradient Boosting:`` An ensemble method where models are built sequentially, with each new model trying to correct the errors of the previous one.
+- ``XGBoost:`` An optimized gradient boosting algorithm designed for speed, efficiency, and strong predictive performance.
+- ``K-Means Clustering:`` An unsupervised learning algorithm that groups data into a chosen number of clusters by minimizing distance to each cluster center.
+- ``Neural Network:`` A model inspired by the human brain that learns patterns through layers of interconnected nodes, or neurons.
 
 # Hyperparameters & Model Parameters
 
-**Learning Rate:** A hyperparameter that controls how much a model’s weights change during each optimization step.
-
-**n_estimators:** The number of trees or base models used in ensemble methods such as random forests or gradient boosting.
-
-**Criterion:** A rule used by models such as decision trees to measure the quality of a split.
-
-**Weights:** Learnable parameters that determine the importance of inputs in a model, especially in neural networks.
-
-**Bias Term:** A constant added to a model’s calculation that helps it fit data more flexibly.
-
-**Weight Matrix:** A matrix containing weight values that define connections between layers in a neural network.
-
-**Bias Vector:** A vector containing bias values added to each neuron in a layer.
+- ``Learning Rate:`` A hyperparameter that controls how much a model’s weights change during each optimization step.
+- ``n_estimators:`` The number of trees or base models used in ensemble methods such as random forests or gradient boosting.
+- ``Criterion:`` A rule used by models such as decision trees to measure the quality of a split.
+- ``Weights:`` Learnable parameters that determine the importance of inputs in a model, especially in neural networks.
+- ``Bias Term:`` A constant added to a model’s calculation that helps it fit data more flexibly.
+- ``Weight Matrix:`` A matrix containing weight values that define connections between layers in a neural network.
+- ``Bias Vector:`` A vector containing bias values added to each neuron in a layer.
 
 # Evaluation Metrics
 
-**Accuracy:** The proportion of total predictions a model got correct.
+- ```Accuracy:``` The proportion of total predictions a model got correct.
 
 **Precision:** Of all items predicted as positive, the proportion that were actually positive.
 
