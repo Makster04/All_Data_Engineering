@@ -1,3 +1,7 @@
+Got it — I’ll **keep the definitions** and add a **small code example input/output** under each one that actually involves coding.
+
+I’ll do the ones that naturally fit coding best.
+
 ---
 
 # Machine Learning Concepts & Techniques
@@ -1851,10 +1855,3 @@ Name: income_age_ratio, dtype: float64
 
 ---
 
-If you want, I can next turn this into a **clean study-sheet format** where each entry is just:
-
-**Term:** definition
-**Code example:** ...
-**Output:** ...
-
-all in one consistent copy-paste layout.
