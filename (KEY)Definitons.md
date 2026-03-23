@@ -1,7 +1,3 @@
-Got it — I’ll **keep the definitions** and add a **small code example input/output** under each one that actually involves coding.
-
-I’ll do the ones that naturally fit coding best.
-
 ---
 
 # Machine Learning Concepts & Techniques
