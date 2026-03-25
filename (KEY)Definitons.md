@@ -1,11 +1,4 @@
-Absolutely — here’s the full version in that format.
 
-I kept:
-
-* the **definition in normal text**
-* the **code example in a code box**
-* the **explanation lines inside the code box with `#`**
-* the **actual output shown under those comment lines**
 
 ---
 
